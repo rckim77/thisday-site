@@ -2,8 +2,6 @@
 title: Privacy Policy
 ---
 
-# Privacy Policy
-
 Last updated: February 25, 2026
 
 This Day ("we", "us", or "our") helps you review photos and videos from prior years so you can clean up storage in small daily batches.
