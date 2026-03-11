@@ -91,3 +91,9 @@ We may update this Privacy Policy from time to time. When we do, we will update 
 For privacy questions, contact:
 
 daydreamiosapp@gmail.com
+
+## 11. Terms of Use
+
+You can review the This Day Terms of Use here:
+
+[This Day Terms of Use](/terms)
