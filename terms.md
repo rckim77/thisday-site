@@ -12,7 +12,7 @@ This Day helps you review photos and videos from prior years and decide what to 
 
 ## 2. Subscriptions
 
-This Day may offer auto-renewable subscriptions, including monthly and annual plans, that unlock premium features.
+This Day offers auto-renewable subscriptions, including monthly and annual plans, that unlock premium features.
 
 - Payment will be charged to your Apple Account at confirmation of purchase.
 - Subscriptions renew automatically unless canceled at least 24 hours before the end of the current billing period.
@@ -30,7 +30,7 @@ You are responsible for reviewing photos and videos before deleting them. Deleti
 
 ## 5. Privacy
 
-Your use of This Day is also governed by our [Privacy Policy](/).
+Your use of This Day is also governed by our [Privacy Policy](https://rckim77.github.io/thisday-site/).
 
 ## 6. Apple Terms
 
