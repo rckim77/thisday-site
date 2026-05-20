@@ -6,6 +6,10 @@ Last updated: March 11, 2026
 
 This Day ("we", "us", or "our") helps you review photos and videos from prior years so you can clean up storage in small daily batches.
 
+## Featured in 9to5Mac
+
+This Day was published in 9to5Mac's Indie App Spotlight column as a photo cleanup tool that helps turn decluttering into a small daily habit. [Read the feature on 9to5Mac](https://9to5mac.com/2026/05/02/indie-app-spotlight-this-day-photo-cleanup-tool/).
+
 This Privacy Policy explains what information This Day accesses, how it is used, and your choices.
 
 ## 1. Scope
