@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }} — Photo cleanup, one day at a time</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="theme-color" content="#0f1419">
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace: 'index.html', '' }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="apple-itunes-app" content="app-id=6758584686">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body class="landing-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="12" fill="url(#iconGrad)"/>
+            <path d="M24 14v4M16 18h16M18 22h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H18a2 2 0 0 1-2-2V24a2 2 0 0 1 2-2z" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="21" cy="28" r="1.5" fill="#fff"/>
+            <circle cx="27" cy="28" r="1.5" fill="#fff"/>
+            <defs>
+              <linearGradient id="iconGrad" x1="8" y1="4" x2="40" y2="44" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#5B8DEF"/>
+                <stop offset="1" stop-color="#3D6FD9"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="brand-name">This Day</span>
+      </a>
+      <nav class="header-nav" aria-label="Site">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="{{ '/privacy' | relative_url }}">Privacy</a>
+        <a href="{{ '/terms' | relative_url }}">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>This Day</strong>
+        <p>Photo cleanup, one day at a time.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Legal and support">
+        <a href="{{ '/privacy' | relative_url }}">Privacy Policy</a>
+        <a href="{{ '/terms' | relative_url }}">Terms of Use</a>
+        <a href="mailto:daydreamiosapp@gmail.com">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; {{ 'now' | date: '%Y' }} Raymond Kim. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
