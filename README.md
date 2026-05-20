@@ -6,9 +6,11 @@ Marketing landing page and legal pages for the [This Day](https://apps.apple.com
 
 | Path | Content |
 |------|---------|
-| `/` | Landing page |
-| `/privacy/` | Privacy Policy |
+| `/` | Privacy Policy (in-app privacy URL) |
+| `/app/` | Marketing landing page |
 | `/terms/` | Terms of Use |
+
+`/privacy/` redirects to `/` for backward compatibility.
 
 ## Local preview
 
@@ -17,7 +19,8 @@ bundle install
 bundle exec jekyll serve
 ```
 
-Open http://localhost:4000/thisday-site/
+- Landing: http://localhost:4000/thisday-site/app/
+- Privacy: http://localhost:4000/thisday-site/
 
 ## Deploy
 

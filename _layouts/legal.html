@@ -6,6 +6,7 @@
   <title>{{ page.title }} — This Day</title>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/app-icon.png' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 </head>
 <body class="legal-page">
@@ -13,30 +14,26 @@
 
   <header class="site-header site-header--compact">
     <div class="container header-inner">
-      <a class="brand" href="{{ '/' | relative_url }}">
-        <span class="brand-icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="48" height="48" rx="12" fill="url(#iconGradLegal)"/>
-            <path d="M24 14v4M16 18h16M18 22h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H18a2 2 0 0 1-2-2V24a2 2 0 0 1 2-2z" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="21" cy="28" r="1.5" fill="#fff"/>
-            <circle cx="27" cy="28" r="1.5" fill="#fff"/>
-            <defs>
-              <linearGradient id="iconGradLegal" x1="8" y1="4" x2="40" y2="44" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#5B8DEF"/>
-                <stop offset="1" stop-color="#3D6FD9"/>
-              </linearGradient>
-            </defs>
-          </svg>
-        </span>
+      <a class="brand" href="{{ '/app/' | relative_url }}">
+        {% include brand.html %}
         <span class="brand-name">This Day</span>
       </a>
       <nav class="header-nav" aria-label="Site">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/privacy' | relative_url }}"{% if page.url contains 'privacy' %} aria-current="page"{% endif %}>Privacy</a>
+        <a href="{{ '/app/' | relative_url }}">App</a>
+        <a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>Privacy</a>
         <a href="{{ '/terms' | relative_url }}"{% if page.url contains 'terms' %} aria-current="page"{% endif %}>Terms</a>
       </nav>
     </div>
   </header>
+
+  {% if page.url == '/' or page.url == '/index.html' %}
+  <div class="legal-promo">
+    <div class="container legal-promo-inner">
+      {% include brand.html width="40" height="40" %}
+      <p>New to This Day? <a href="{{ '/app/' | relative_url }}">Explore the app</a> or <a href="https://apps.apple.com/us/app/this-day-photo-cleaner/id6758584686">download on the App Store</a>.</p>
+    </div>
+  </div>
+  {% endif %}
 
   <main id="main" class="legal-main">
     <article class="container legal-content">
@@ -48,8 +45,8 @@
   <footer class="site-footer site-footer--compact">
     <div class="container footer-inner">
       <nav class="footer-nav" aria-label="Legal and support">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/privacy' | relative_url }}">Privacy Policy</a>
+        <a href="{{ '/app/' | relative_url }}">App</a>
+        <a href="{{ '/' | relative_url }}">Privacy Policy</a>
         <a href="{{ '/terms' | relative_url }}">Terms of Use</a>
         <a href="mailto:daydreamiosapp@gmail.com">Contact</a>
       </nav>

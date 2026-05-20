@@ -1,172 +1,126 @@
 ---
-layout: landing
-title: This Day
+layout: legal
+title: Privacy Policy
 permalink: /
+redirect_from:
+  - /privacy/
+  - /privacy
 ---
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <p class="hero-eyebrow">iOS photo cleanup</p>
-      <h1>Turn decluttering into a daily habit</h1>
-      <p class="hero-lead">
-        This Day shows photos and videos from this calendar day in past years—so you can review memories in small batches, free up storage, and never feel overwhelmed by your whole library.
-      </p>
-      <div class="hero-cta">
-        <a class="app-store-badge" href="https://apps.apple.com/us/app/this-day-photo-cleaner/id6758584686" rel="noopener" aria-label="Download on the App Store">
-          <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="250" height="83">
-        </a>
-        <p class="hero-note">Free for iPhone and iPad · iOS 26+ · Optional Premium subscription</p>
-      </div>
-    </div>
-    <div class="hero-visual" aria-hidden="true">
-      <div class="phone-mock">
-        <div class="phone-mock-header">
-          <span class="phone-mock-date">May 20</span>
-          <span>2019 – 2024</span>
-        </div>
-        <div class="memory-grid">
-          <div class="memory-card"><span>2019</span></div>
-          <div class="memory-card memory-card--highlight"><span>2021</span></div>
-          <div class="memory-card"><span>2022</span></div>
-          <div class="memory-card"><span>2024</span></div>
-        </div>
-        <div class="phone-mock-stats">
-          <div class="stat">
-            <span class="stat-value">2.4 GB</span>
-            <span class="stat-label">reclaimed this month</span>
-          </div>
-          <div class="stat">
-            <span class="stat-value">12 day</span>
-            <span class="stat-label">streak</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+Last updated: March 11, 2026
 
-<section id="features" class="section">
-  <div class="container">
-    <header class="section-header">
-      <h2>Everything you need to tidy up—without the guilt trip</h2>
-      <p>Built for real libraries. Designed to feel calm, focused, and fast.</p>
-    </header>
-    <div class="features-grid">
-      <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">📅</div>
-        <h3>One day at a time</h3>
-        <p>See only what you captured on today’s date across prior years—so each session stays short and manageable.</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">🗂️</div>
-        <h3>Duplicates &amp; Live Photos</h3>
-        <p>Find exact duplicates in your results and convert Live Photos to stills to save space without losing the moment.</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">🔥</div>
-        <h3>Streaks &amp; milestones</h3>
-        <p>Daily reminders, progress streaks, and milestones celebrate storage you’ve reclaimed—gentle motivation that sticks.</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">✓</div>
-        <h3>You stay in control</h3>
-        <p>Nothing is deleted until you confirm. Share to the iOS share sheet only when you choose.</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">🔒</div>
-        <h3>Private by design</h3>
-        <p>Your library stays on your device. No ads, no selling your data, and no uploading your photos to our servers.</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">♿</div>
-        <h3>Accessible &amp; native</h3>
-        <p>Dark Mode, Dynamic Type, and VoiceOver support—so cleanup works the way you already use your iPhone.</p>
-      </article>
-    </div>
-  </div>
-</section>
+This Day ("we", "us", or "our") helps you review photos and videos from prior years so you can clean up storage in small daily batches.
 
-<section id="how-it-works" class="section section--alt">
-  <div class="container">
-    <header class="section-header">
-      <h2>How it works</h2>
-      <p>A few minutes a day beats an all-weekend photo purge.</p>
-    </header>
-    <div class="steps">
-      <article class="step">
-        <h3>Open today’s memories</h3>
-        <p>Grant Photos access once. This Day surfaces shots from this day in previous years—ready to swipe through.</p>
-      </article>
-      <article class="step">
-        <h3>Keep, share, or delete</h3>
-        <p>Review thumbnails at your pace. Delete in bulk when you’re sure, or share favorites through the system share sheet.</p>
-      </article>
-      <article class="step">
-        <h3>Come back tomorrow</h3>
-        <p>Set a daily reminder, build a streak, and watch your reclaimed storage grow—without touching tens of thousands of photos at once.</p>
-      </article>
-    </div>
-  </div>
-</section>
+This Privacy Policy explains what information This Day accesses, how it is used, and your choices.
 
-<section class="section">
-  <div class="container">
-    <div class="press-card">
-      <span class="press-badge">9to5Mac</span>
-      <blockquote>
-        “Instead of showing you tens of thousands of photos at once, This Day takes a more focused approach… I love this approach since it takes the mental burden out of it, and it becomes just a few minute process every day.”
-        — <a href="https://9to5mac.com/2026/05/02/indie-app-spotlight-this-day-photo-cleanup-tool/" rel="noopener">Indie App Spotlight, 9to5Mac</a>
-      </blockquote>
-    </div>
-  </div>
-</section>
+## 1. Scope
 
-<section class="section section--alt">
-  <div class="container">
-    <header class="section-header">
-      <h2>Your photos never leave your phone</h2>
-      <p>We built This Day for people who care where their memories go.</p>
-    </header>
-    <div class="trust-grid">
-      <div class="trust-item">
-        <span class="trust-check" aria-hidden="true">✓</span>
-        <div>
-          <strong>On-device processing</strong>
-          <p>Core features run locally through Apple’s Photos APIs. We don’t upload your library to our servers.</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <span class="trust-check" aria-hidden="true">✓</span>
-        <div>
-          <strong>No ads or data sales</strong>
-          <p>No third-party advertising SDKs. We don’t sell your personal information.</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <span class="trust-check" aria-hidden="true">✓</span>
-        <div>
-          <strong>Transparent subscriptions</strong>
-          <p>Premium is optional. Billing is handled by Apple; restore purchases anytime from the app.</p>
-        </div>
-      </div>
-      <div class="trust-item">
-        <span class="trust-check" aria-hidden="true">✓</span>
-        <div>
-          <strong>Clear policies</strong>
-          <p>Read our <a href="{{ '/privacy' | relative_url }}">Privacy Policy</a> and <a href="{{ '/terms' | relative_url }}">Terms of Use</a> anytime.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+This Privacy Policy applies to the This Day iOS app.
 
-<section class="cta-band">
-  <div class="container">
-    <h2>Ready to reclaim storage?</h2>
-    <p>Download This Day free and start with today’s memories from years past.</p>
-    <a class="app-store-badge" href="https://apps.apple.com/us/app/this-day-photo-cleaner/id6758584686" rel="noopener" aria-label="Download on the App Store">
-      <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83" alt="Download on the App Store" width="250" height="83">
-    </a>
-  </div>
-</section>
+## 2. Information We Access and Process
+
+### a) Photos and videos (on-device)
+
+If you grant Photos permission, This Day accesses your Photos library on your device to:
+
+- Find items from the same calendar day across prior years
+- Show thumbnails and details so you can review content
+- Detect exact duplicates within surfaced results
+- Delete items only when you explicitly choose delete actions
+- Export selected items to the iOS share sheet when you explicitly choose share actions
+
+We do not require account creation to use the app.
+
+### b) Notification settings
+
+If you enable reminders, This Day stores your reminder preferences (enabled state, hour, minute) and schedules local notifications on your device.
+
+### c) Subscriptions and purchases
+
+If you view, purchase, restore, or manage a subscription, Apple handles payment processing through your Apple Account.
+
+We use RevenueCat to help provide subscription functionality. RevenueCat may process limited subscription-related and technical data such as product identifiers, entitlement or subscription status, transaction status, and an anonymous app user identifier generated by the SDK.
+
+### d) Analytics
+
+This Day uses Firebase Analytics to understand app usage and improve the product. Analytics events may include app screens viewed and in-app actions such as reminder interactions, duplicate detection and review usage, and cleanup progress events.
+
+Firebase Analytics may also process related app instance and device data needed to provide analytics services.
+
+### e) Local app preferences and progress
+
+This Day stores app settings and progress locally on your device, including values such as:
+
+- Years to show
+- Sort and appearance preferences
+- Streak and milestone progress
+- Total deleted storage counter
+
+### f) Feedback email
+
+If you use "Send Feedback," your mail app opens a draft addressed to us. Any information you send in that email is provided by you voluntarily.
+
+## 3. How We Use Information
+
+We use accessed or stored information only to provide and improve core app functionality, including:
+
+- Showing relevant daily memories
+- Enabling deletion and sharing actions you request
+- Providing reminders and streak/milestone progress
+- Processing subscriptions and restoring premium access
+- Understanding product usage and improving the app
+- Responding to support or feedback emails
+
+## 4. Data Sharing
+
+We do not sell your personal data.
+
+We do not use third-party advertising SDKs in This Day.
+
+We do not upload your photo/video library to our own servers as part of normal app use.
+
+We share limited information with service providers only as needed to operate the app, including:
+
+- Apple, for App Store purchases, subscription billing, notifications, and platform services
+- RevenueCat, for subscription validation, entitlement status, and subscription management support
+- Google Firebase, for product analytics
+
+Data may also leave your device when you explicitly choose to share content via iOS sharing destinations, or when Apple processes device-level services you use (for example, iCloud Photos).
+
+## 5. Retention and Deletion
+
+Because core app data is stored on-device, you can remove it by uninstalling the app or resetting app preferences where available.
+
+Photo/video deletion actions are performed through Apple Photos APIs and follow Apple Photos behavior (for example, items may move to "Recently Deleted" before permanent removal).
+
+Subscription and analytics data processed by our service providers may be retained according to their own retention practices and policies.
+
+## 6. Security
+
+We rely on Apple platform protections and process your Photos library data on-device for core features.
+
+No method of storage or transmission is fully secure, but we design This Day to minimize data exposure by avoiding unnecessary data collection and server storage.
+
+## 7. Children's Privacy
+
+This Day is not directed to children under 13, and we do not knowingly collect personal information from children under 13.
+
+## 8. International Users
+
+If you contact us, or if you use subscriptions or analytics-enabled app features, related data may be processed in countries where we or our service providers operate.
+
+## 9. Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date above.
+
+## 10. Contact Us
+
+For privacy questions, contact:
+
+daydreamiosapp@gmail.com
+
+## 11. Terms of Use
+
+You can review the This Day Terms of Use here:
+
+[This Day Terms of Use]({{ '/terms/' | relative_url }})

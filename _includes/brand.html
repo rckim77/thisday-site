@@ -1,0 +1,10 @@
+<span class="brand-icon">
+  <img
+    class="app-icon app-icon--{{ include.size | default: 'sm' }}"
+    src="{{ '/assets/images/app-icon.png' | relative_url }}"
+    alt=""
+    width="{{ include.width | default: 36 }}"
+    height="{{ include.height | default: 36 }}"
+    {% if include.size == 'lg' %}decoding="async"{% endif %}
+  >
+</span>
