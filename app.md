@@ -7,7 +7,7 @@ permalink: /app/
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
-      {% include brand.html size="lg" width="80" height="80" %}
+      {% include brand.html large=true width="80" height="80" %}
       <p class="hero-eyebrow">iOS photo cleanup</p>
       <h1>Turn decluttering into a daily habit</h1>
       <p class="hero-lead">
