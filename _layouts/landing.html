@@ -24,19 +24,7 @@
 <body class="landing-page">
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand brand--text-only" href="{{ '/app/' | relative_url }}">
-        <span class="brand-name">this day</span>
-      </a>
-      <nav class="header-nav" aria-label="Site">
-        <a href="{{ '/app/' | relative_url }}#features">Features</a>
-        <a href="{{ '/app/' | relative_url }}#premium">Premium</a>
-        <a href="{{ '/' | relative_url }}">Privacy</a>
-        <a href="{{ '/terms' | relative_url }}">Terms</a>
-      </nav>
-    </div>
-  </header>
+  {% include site-header.html %}
 
   <main id="main">
     {{ content }}

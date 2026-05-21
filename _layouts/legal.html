@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>{{ page.title }} — This Day</title>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
@@ -12,19 +12,7 @@
 <body class="legal-page">
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header site-header--compact">
-    <div class="container header-inner">
-      <a class="brand" href="{{ '/app/' | relative_url }}">
-        {% include brand.html %}
-        <span class="brand-name">This Day</span>
-      </a>
-      <nav class="header-nav" aria-label="Site">
-        <a href="{{ '/app/' | relative_url }}">App</a>
-        <a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>Privacy</a>
-        <a href="{{ '/terms' | relative_url }}"{% if page.url contains 'terms' %} aria-current="page"{% endif %}>Terms</a>
-      </nav>
-    </div>
-  </header>
+  {% include site-header.html %}
 
   {% if page.url == '/' or page.url == '/index.html' %}
   <div class="legal-promo">

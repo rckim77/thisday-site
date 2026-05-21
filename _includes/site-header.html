@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand brand--text-only" href="{{ '/app/' | relative_url }}">
+      <span class="brand-name">this day</span>
+    </a>
+    <nav class="header-nav" aria-label="Site">
+      <a href="{{ '/app/' | relative_url }}#features">Features</a>
+      <a href="{{ '/app/' | relative_url }}#premium">Premium</a>
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>Privacy</a>
+      <a href="{{ '/terms' | relative_url }}"{% if page.url contains 'terms' %} aria-current="page"{% endif %}>Terms</a>
+    </nav>
+  </div>
+</header>
