@@ -120,13 +120,15 @@ a:hover {
 .app-icon {
   display: block;
   border-radius: 22%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 }
 
 .app-icon--lg {
-  border-radius: 22%;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
   margin-bottom: 1.25rem;
+}
+
+/* Depth only on large hero/CTA icons over dark backgrounds */
+.hero .app-icon--lg {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
 }
 
 .hero-showcase-icon {
@@ -582,6 +584,10 @@ a:hover {
 
 .legal-promo-inner a {
   font-weight: 600;
+}
+
+.legal-promo .app-icon {
+  box-shadow: none;
 }
 
 .footer-nav {
