@@ -49,6 +49,10 @@ body {
   padding-right: env(safe-area-inset-right);
 }
 
+.landing-page {
+  background: #fff;
+}
+
 img, svg {
   display: block;
   max-width: 100%;
@@ -321,6 +325,15 @@ a:hover {
   padding: clamp(3.5rem, 7vw, 5.5rem) 0;
 }
 
+.section--white {
+  background: #fff;
+}
+
+.section--muted {
+  background: var(--bg-soft);
+}
+
+/* Legacy alias */
 .section--alt {
   background: #fff;
 }
@@ -346,12 +359,12 @@ a:hover {
 
 /* Feature carousel */
 
-.section--features {
-  background: #fff;
+#features .section-header {
+  margin-bottom: 2rem;
 }
 
-.section--features .section-header {
-  margin-bottom: 2rem;
+.section--muted .premium-benefits-list li {
+  background: #fff;
 }
 
 .feature-carousel {

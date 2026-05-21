@@ -36,7 +36,7 @@ permalink: /app/
   </div>
 </section>
 
-<section id="features" class="section section--features">
+<section id="features" class="section section--white">
   <div class="container">
     <header class="section-header">
       <h2>Features</h2>
@@ -119,7 +119,7 @@ permalink: /app/
   </div>
 </section>
 
-<section id="premium" class="section section--alt">
+<section id="premium" class="section section--muted">
   <div class="container">
     <header class="section-header">
       <h2>Premium</h2>
@@ -165,7 +165,7 @@ permalink: /app/
   </div>
 </section>
 
-<section class="section">
+<section class="section section--white">
   <div class="container">
     <header class="section-header">
       <h2>Your photos never leave your phone</h2>
