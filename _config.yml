@@ -6,3 +6,4 @@ theme: minima
 markdown: kramdown
 plugins:
   - jekyll-redirect-from
+  - jekyll-sitemap

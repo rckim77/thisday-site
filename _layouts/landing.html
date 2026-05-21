@@ -6,12 +6,13 @@
   <title>{{ page.title | default: site.title }} — Photo cleanup, one day at a time</title>
   <meta name="description" content="{{ site.description }}">
   <meta name="theme-color" content="#4a8fd4">
-  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/app/">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
   {% include site-icons.html %}
+  {% include app-schema.html %}
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ page.title | default: site.title }}">
   <meta property="og:description" content="{{ site.description }}">
-  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/app/">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/app-icon.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ page.title | default: site.title }}">
