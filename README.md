@@ -44,3 +44,5 @@ Requires the `thisday` and `app-store-slides-tool` checkouts at the paths used i
 ## Deploy
 
 Push to `main`; GitHub Pages builds automatically.
+
+**Important:** This repository must remain public for GitHub Pages to serve the site. Do not make the repo private unless GitHub Pages hosting has been moved to a plan or setup that supports private repositories.
