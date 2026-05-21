@@ -1,2 +1,6 @@
 title: This Day
+description: Turn photo cleanup into a simple daily habit. Review memories from this day in past years and reclaim storage, a few minutes at a time.
+url: "https://rckim77.github.io"
+baseurl: "/thisday-site"
 theme: minima
+markdown: kramdown

@@ -1,5 +1,7 @@
 ---
+layout: legal
 title: Privacy Policy
+permalink: /
 ---
 
 Last updated: March 11, 2026
@@ -118,4 +120,4 @@ daydreamiosapp@gmail.com
 
 You can review the This Day Terms of Use here:
 
-[This Day Terms of Use](https://rckim77.github.io/thisday-site/terms)
+[This Day Terms of Use]({{ '/terms/' | relative_url }})

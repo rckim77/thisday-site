@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ page.title | default: site.title }} — Photo cleanup, one day at a time</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="theme-color" content="#4a8fd4">
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/app/">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/app-icon.png' | relative_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/app/">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/app-icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/app-icon.png">
+  <meta name="apple-itunes-app" content="app-id=6758584686">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <script src="{{ '/assets/js/landing.js' | relative_url }}" defer></script>
+</head>
+<body class="landing-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  {% include site-header.html %}
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="footer-brand-link footer-brand-link--icon-only" href="{{ '/app/' | relative_url }}" aria-label="This Day home">
+          {% include brand.html width="32" height="32" %}
+        </a>
+      </div>
+      <nav class="footer-nav" aria-label="Legal and support">
+        <a href="{{ '/' | relative_url }}">Privacy Policy</a>
+        <a href="{{ '/terms' | relative_url }}">Terms of Use</a>
+        <a href="mailto:daydreamiosapp@gmail.com">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; {{ 'now' | date: '%Y' }} Ray Kim. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
