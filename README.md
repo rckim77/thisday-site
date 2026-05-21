@@ -10,8 +10,6 @@ Marketing landing page and legal pages for the [This Day](https://apps.apple.com
 | `/app/` | Marketing landing page |
 | `/terms/` | Terms of Use |
 
-`/privacy/` redirects to `/` for backward compatibility.
-
 ## Local preview
 
 From the project directory:

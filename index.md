@@ -2,9 +2,6 @@
 layout: legal
 title: Privacy Policy
 permalink: /
-redirect_from:
-  - /privacy/
-  - /privacy
 ---
 
 Last updated: March 11, 2026
