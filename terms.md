@@ -2,6 +2,8 @@
 layout: legal
 title: Terms of Use
 permalink: /terms/
+redirect_from:
+  - /terms.html
 ---
 
 Last updated: March 11, 2026
