@@ -142,6 +142,7 @@ a:hover {
   font-size: 1.35rem;
   letter-spacing: 0.01em;
   text-transform: lowercase;
+  white-space: nowrap;
 }
 
 .brand-icon {
@@ -382,28 +383,43 @@ a:hover {
 }
 
 .feature-carousel-visual {
+  overflow: hidden;
   position: relative;
-  min-height: 280px;
+}
+
+.feature-slide-track,
+.feature-copy-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 }
 
 .feature-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
   margin: 0;
-  transition: opacity 0.35s ease;
 }
 
-.feature-slide[hidden] {
-  display: none;
+.feature-copy-viewport {
+  overflow: hidden;
+  transition: min-height 0.35s ease;
+}
+
+.feature-copy-track {
+  align-items: flex-start;
+}
+
+.feature-panel {
+  flex: 0 0 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+  padding-right: 0.25rem;
 }
 
 .feature-carousel-copy {
   display: grid;
   gap: 1.5rem;
   align-content: center;
-  min-height: 12rem;
-}
-
-.feature-panel[hidden] {
-  display: none;
 }
 
 .feature-kicker {
@@ -464,16 +480,17 @@ a:hover {
   width: 0.55rem;
   height: 0.55rem;
   padding: 0;
-  border: none;
+  border: 1.5px solid #8fa8c8;
   border-radius: 50%;
-  background: #c8d4e8;
+  background: #fff;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 .feature-dot.is-active {
   background: var(--accent);
-  transform: scale(1.25);
+  border-color: var(--accent);
+  transform: scale(1.2);
 }
 
 /* Premium */
@@ -491,37 +508,52 @@ a:hover {
   }
 }
 
-.premium-copy {
+.premium-benefits {
   max-width: 36rem;
 }
 
-.premium-intro {
-  margin: 0 0 1rem;
-  font-size: 1.05rem;
-  color: var(--text-primary);
-}
-
-.premium-list {
+.premium-headline {
   margin: 0 0 1.25rem;
-  padding-left: 1.2rem;
-  display: grid;
-  gap: 0.65rem;
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  letter-spacing: -0.02em;
 }
 
-.premium-list li {
-  color: var(--text-primary);
-  line-height: 1.45;
-}
-
-.premium-list li::marker {
-  color: var(--accent);
-}
-
-.premium-pricing {
+.premium-benefits-list {
   margin: 0;
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  line-height: 1.55;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.premium-benefits-list li {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  padding: 1rem 1.1rem;
+  background: #f8fafc;
+  border: 1px solid #e4e9f0;
+  border-radius: var(--radius-sm);
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.premium-check {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+  border-radius: 50%;
+  margin-top: 0.1rem;
+}
+
+.premium-benefits-list strong {
+  color: var(--text-primary);
 }
 
 .premium-visual {
@@ -804,27 +836,12 @@ a:hover {
     height: 2.75rem;
   }
 
-  .feature-dot {
-    width: 0.65rem;
-    height: 0.65rem;
-    padding: 0.4rem;
-    background-clip: content-box;
-  }
-
   .premium-layout {
-    text-align: center;
+    text-align: left;
   }
 
-  .premium-list {
-    text-align: left;
-    max-width: 22rem;
-    margin-inline: auto;
-  }
-
-  .premium-pricing {
-    text-align: left;
-    max-width: 22rem;
-    margin-inline: auto;
+  .premium-benefits-list {
+    max-width: none;
   }
 
   .premium-visual {
@@ -849,25 +866,48 @@ a:hover {
   }
 }
 
+@media (max-width: 899px) {
+  .landing-page .header-inner {
+    align-items: center;
+  }
+
+  .landing-page .header-nav {
+    gap: 0.35rem 0.55rem;
+    justify-content: flex-end;
+    max-width: 58%;
+  }
+
+  .landing-page .header-nav a {
+    font-size: 0.72rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .landing-page .brand--text-only .brand-name {
+    font-size: 1.05rem;
+  }
+}
+
 @media (max-width: 640px) {
   :root {
-    --header-h: 52px;
+    --header-h: 48px;
   }
 
   body {
     font-size: 16px;
   }
 
-  .header-nav {
-    gap: 0.5rem 0.75rem;
+  .landing-page .header-nav {
+    gap: 0.3rem 0.45rem;
+    max-width: 62%;
   }
 
-  .header-nav a {
-    font-size: 0.82rem;
+  .landing-page .header-nav a {
+    font-size: 0.68rem;
   }
 
   .landing-page .brand--text-only .brand-name {
-    font-size: 1.2rem;
+    font-size: 0.98rem;
   }
 
   .hero h1 {
@@ -902,5 +942,16 @@ a:hover {
   .device-frame--feature,
   .device-frame--premium {
     max-width: min(280px, 88vw);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-slide-track,
+  .feature-copy-track {
+    transition: none;
+  }
+
+  .feature-copy-viewport {
+    transition: none;
   }
 }
