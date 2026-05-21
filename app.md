@@ -19,14 +19,20 @@ permalink: /app/
         </a>
         <p class="hero-note">Free for iPhone and iPad · iOS 26+ · Optional Premium subscription</p>
       </div>
+      <p class="hero-press">
+        <span class="hero-press-label">Featured in 9to5Mac</span>
+        “Instead of showing you tens of thousands of photos at once, This Day takes a more focused approach… it becomes just a few minute process every day.”
+        <a href="https://9to5mac.com/2026/05/02/indie-app-spotlight-this-day-photo-cleanup-tool/" rel="noopener">Read the Indie App Spotlight</a>
+      </p>
     </div>
     <div class="hero-visual">
       <img
-        class="hero-showcase-icon"
-        src="{{ '/assets/images/app-icon.png' | relative_url }}"
-        alt="This Day app icon"
-        width="280"
-        height="280"
+        class="device-frame device-frame--hero"
+        src="{{ '/assets/images/devices/hero-gallery.png' | relative_url }}"
+        alt="This Day gallery view showing photos from the same day across prior years"
+        width="405"
+        height="828"
+        loading="eager"
       >
     </div>
   </div>
@@ -38,37 +44,76 @@ permalink: /app/
       <h2>Everything you need to tidy up—without the guilt trip</h2>
       <p>Built for real libraries. Designed to feel calm, focused, and fast.</p>
     </header>
-    <div class="features-grid">
-      <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">📅</div>
-        <h3>One day at a time</h3>
-        <p>See only what you captured on today’s date across prior years—so each session stays short and manageable.</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">🗂️</div>
-        <h3>Duplicates &amp; Live Photos</h3>
-        <p>Find exact duplicates in your results and convert Live Photos to stills to save space without losing the moment.</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">🔥</div>
-        <h3>Streaks &amp; milestones</h3>
-        <p>Daily reminders, progress streaks, and milestones celebrate storage you’ve reclaimed—gentle motivation that sticks.</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">✓</div>
-        <h3>You stay in control</h3>
-        <p>Nothing is deleted until you confirm. Share to the iOS share sheet only when you choose.</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">🔒</div>
-        <h3>Private by design</h3>
-        <p>Your library stays on your device. No ads, no selling your data, and no uploading your photos to our servers.</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">♿</div>
-        <h3>Accessible &amp; native</h3>
-        <p>Dark Mode, Dynamic Type, and VoiceOver support—so cleanup works the way you already use your iPhone.</p>
-      </article>
+
+    <div class="feature-carousel" data-feature-carousel>
+      <div class="feature-carousel-layout">
+        <div class="feature-carousel-visual">
+          <figure class="feature-slide" data-feature-slide aria-hidden="false">
+            <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-daily-review.png' | relative_url }}" alt="Gallery of photos from today's date in past years" width="405" height="828">
+          </figure>
+          <figure class="feature-slide" data-feature-slide hidden aria-hidden="true">
+            <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-live-photos.png' | relative_url }}" alt="Convert Live Photos to stills to save storage" width="405" height="828">
+          </figure>
+          <figure class="feature-slide" data-feature-slide hidden aria-hidden="true">
+            <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-duplicates.png' | relative_url }}" alt="Review and delete exact duplicate photos" width="405" height="828">
+          </figure>
+          <figure class="feature-slide" data-feature-slide hidden aria-hidden="true">
+            <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-reminders.png' | relative_url }}" alt="Daily reminder settings in This Day" width="405" height="828">
+          </figure>
+          <figure class="feature-slide" data-feature-slide hidden aria-hidden="true">
+            <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-milestones.png' | relative_url }}" alt="Storage milestones and achievements" width="405" height="828">
+          </figure>
+          <figure class="feature-slide" data-feature-slide hidden aria-hidden="true">
+            <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-memories.png' | relative_url }}" alt="Relive and share memories from past years" width="405" height="828">
+          </figure>
+        </div>
+
+        <div class="feature-carousel-copy">
+          <article class="feature-panel" data-feature-slide aria-hidden="false">
+            <p class="feature-kicker">Daily review</p>
+            <h3>One day at a time</h3>
+            <p>See only what you captured on today’s date across prior years—so each session stays short and manageable.</p>
+          </article>
+          <article class="feature-panel" data-feature-slide hidden aria-hidden="true">
+            <p class="feature-kicker">Storage saver</p>
+            <h3>Convert Live Photos</h3>
+            <p>Turn Live Photos into stills to reclaim space without losing the shot you care about.</p>
+          </article>
+          <article class="feature-panel" data-feature-slide hidden aria-hidden="true">
+            <p class="feature-kicker">Smart cleanup</p>
+            <h3>Delete duplicates</h3>
+            <p>Find exact duplicates in your results and remove them in bulk when you are ready.</p>
+          </article>
+          <article class="feature-panel" data-feature-slide hidden aria-hidden="true">
+            <p class="feature-kicker">Stay on track</p>
+            <h3>Daily reminders</h3>
+            <p>Schedule a gentle nudge at the time that works for you and build a cleanup streak.</p>
+          </article>
+          <article class="feature-panel" data-feature-slide hidden aria-hidden="true">
+            <p class="feature-kicker">Motivation</p>
+            <h3>Achieve milestones</h3>
+            <p>Celebrate storage you have reclaimed with progress milestones that make habit-building satisfying.</p>
+          </article>
+          <article class="feature-panel" data-feature-slide hidden aria-hidden="true">
+            <p class="feature-kicker">Your library</p>
+            <h3>Relive memories</h3>
+            <p>Keep the photos that matter, share favorites through the iOS share sheet, and delete only when you confirm.</p>
+          </article>
+
+          <div class="feature-carousel-controls" aria-label="Feature carousel controls">
+            <button type="button" class="feature-nav" data-feature-prev aria-label="Previous feature">←</button>
+            <div class="feature-dots" role="tablist" aria-label="Features">
+              <button type="button" class="feature-dot is-active" data-feature-dot role="tab" aria-selected="true" aria-label="One day at a time"></button>
+              <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Convert Live Photos"></button>
+              <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Delete duplicates"></button>
+              <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Daily reminders"></button>
+              <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Achieve milestones"></button>
+              <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Relive memories"></button>
+            </div>
+            <button type="button" class="feature-nav" data-feature-next aria-label="Next feature">→</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -79,36 +124,36 @@ permalink: /app/
       <h2>How it works</h2>
       <p>A few minutes a day beats an all-weekend photo purge.</p>
     </header>
-    <div class="steps">
-      <article class="step">
-        <h3>Open today’s memories</h3>
-        <p>Grant Photos access once. This Day surfaces shots from this day in previous years—ready to swipe through.</p>
+    <div class="how-steps">
+      <article class="how-step">
+        <div class="how-step-copy">
+          <span class="how-step-number">1</span>
+          <h3>Open today’s memories</h3>
+          <p>Grant Photos access once. This Day surfaces shots from this day in previous years—ready to swipe through.</p>
+        </div>
+        <img class="device-frame device-frame--how" src="{{ '/assets/images/devices/how-open-memories.png' | relative_url }}" alt="This Day gallery for today's date across prior years" width="324" height="662" loading="lazy">
       </article>
-      <article class="step">
-        <h3>Keep, share, or delete</h3>
-        <p>Review thumbnails at your pace. Delete in bulk when you’re sure, or share favorites through the system share sheet.</p>
+      <article class="how-step how-step--reverse">
+        <div class="how-step-copy">
+          <span class="how-step-number">2</span>
+          <h3>Keep, share, or delete</h3>
+          <p>Review thumbnails at your pace. Delete in bulk when you’re sure, or share favorites through the system share sheet.</p>
+        </div>
+        <img class="device-frame device-frame--how" src="{{ '/assets/images/devices/how-review-delete.png' | relative_url }}" alt="Review duplicates and delete unwanted photos" width="324" height="662" loading="lazy">
       </article>
-      <article class="step">
-        <h3>Come back tomorrow</h3>
-        <p>Set a daily reminder, build a streak, and watch your reclaimed storage grow—without touching tens of thousands of photos at once.</p>
+      <article class="how-step">
+        <div class="how-step-copy">
+          <span class="how-step-number">3</span>
+          <h3>Come back tomorrow</h3>
+          <p>Set a daily reminder, build a streak, and watch your reclaimed storage grow—without touching tens of thousands of photos at once.</p>
+        </div>
+        <img class="device-frame device-frame--how" src="{{ '/assets/images/devices/how-daily-habit.png' | relative_url }}" alt="Daily reminder settings to build a cleanup habit" width="324" height="662" loading="lazy">
       </article>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container">
-    <div class="press-card">
-      <span class="press-badge">9to5Mac</span>
-      <blockquote>
-        “Instead of showing you tens of thousands of photos at once, This Day takes a more focused approach… I love this approach since it takes the mental burden out of it, and it becomes just a few minute process every day.”
-        — <a href="https://9to5mac.com/2026/05/02/indie-app-spotlight-this-day-photo-cleanup-tool/" rel="noopener">Indie App Spotlight, 9to5Mac</a>
-      </blockquote>
-    </div>
-  </div>
-</section>
-
-<section class="section section--alt">
   <div class="container">
     <header class="section-header">
       <h2>Your photos never leave your phone</h2>
@@ -149,17 +194,10 @@ permalink: /app/
 
 <section class="cta-band">
   <div class="container">
-    <img
-      class="cta-app-icon"
-      src="{{ '/assets/images/app-icon.png' | relative_url }}"
-      alt=""
-      width="72"
-      height="72"
-    >
     <h2>Ready to reclaim storage?</h2>
     <p>Download This Day free and start with today’s memories from years past.</p>
     <a class="app-store-badge" href="https://apps.apple.com/us/app/this-day-photo-cleaner/id6758584686" rel="noopener" aria-label="Download on the App Store">
-      <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83" alt="Download on the App Store" width="250" height="83">
+      <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="250" height="83">
     </a>
   </div>
 </section>
