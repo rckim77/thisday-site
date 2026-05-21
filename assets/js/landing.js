@@ -2,15 +2,13 @@
   var carousel = document.querySelector("[data-feature-carousel]");
   if (!carousel) return;
 
-  var visualTrack = carousel.querySelector("[data-feature-visual-track]");
-  var copyTrack = carousel.querySelector("[data-feature-copy-track]");
-  var visualSlides = visualTrack
-    ? Array.prototype.slice.call(visualTrack.querySelectorAll("[data-feature-slide]"))
-    : [];
-  var copySlides = copyTrack
-    ? Array.prototype.slice.call(copyTrack.querySelectorAll("[data-feature-slide]"))
-    : [];
-  var copySlider = carousel.querySelector(".feature-copy-slider");
+  var visualSlides = Array.prototype.slice.call(
+    carousel.querySelectorAll("[data-feature-visual-slide]")
+  );
+  var copySlides = Array.prototype.slice.call(
+    carousel.querySelectorAll("[data-feature-copy-slide]")
+  );
+  var copyViewport = carousel.querySelector("[data-feature-copy-viewport]");
   var dots = Array.prototype.slice.call(
     carousel.querySelectorAll("[data-feature-dot]")
   );
@@ -18,24 +16,20 @@
   var nextButton = carousel.querySelector("[data-feature-next]");
 
   var slideCount = visualSlides.length;
-  if (!slideCount || slideCount !== copySlides.length || !visualTrack || !copyTrack) {
+  if (!slideCount || slideCount !== copySlides.length || !copyViewport) {
     return;
   }
 
   var activeIndex = 0;
   var timerId = null;
-  var intervalMs = 4000;
+  var intervalMs = 5000;
+  var transitionMs = 700;
   var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  function setTrackOffset(track, index) {
-    track.style.transform = "translate3d(-" + index * 100 + "%, 0, 0)";
-  }
-
   function syncCopyHeight() {
-    if (!copySlider) return;
     var activePanel = copySlides[activeIndex];
     if (!activePanel) return;
-    copySlider.style.minHeight = activePanel.offsetHeight + "px";
+    copyViewport.style.minHeight = activePanel.offsetHeight + "px";
   }
 
   function setAria(index) {
@@ -52,12 +46,27 @@
     });
   }
 
-  function setActive(index) {
-    activeIndex = (index + slideCount) % slideCount;
-    setTrackOffset(visualTrack, activeIndex);
-    setTrackOffset(copyTrack, activeIndex);
+  function setActive(index, direction) {
+    var nextIndex = (index + slideCount) % slideCount;
+    if (nextIndex === activeIndex) return;
+
+    carousel.setAttribute("data-direction", direction || "next");
+
+    visualSlides[activeIndex].classList.remove("is-active");
+    copySlides[activeIndex].classList.remove("is-active");
+
+    activeIndex = nextIndex;
+
+    visualSlides[activeIndex].classList.add("is-active");
+    copySlides[activeIndex].classList.add("is-active");
+
     setAria(activeIndex);
+
     window.requestAnimationFrame(syncCopyHeight);
+    window.setTimeout(function () {
+      carousel.removeAttribute("data-direction");
+      syncCopyHeight();
+    }, transitionMs);
   }
 
   function stopTimer() {
@@ -70,13 +79,19 @@
   function startTimer() {
     stopTimer();
     timerId = window.setInterval(function () {
-      setActive(activeIndex + 1);
+      setActive(activeIndex + 1, "next");
     }, intervalMs);
   }
 
   function goTo(index) {
     if (index === activeIndex) return;
-    setActive(index);
+    var direction = index > activeIndex ? "next" : "prev";
+    if (index === 0 && activeIndex === slideCount - 1) {
+      direction = "next";
+    } else if (index === slideCount - 1 && activeIndex === 0) {
+      direction = "prev";
+    }
+    setActive(index, direction);
     startTimer();
   }
 
@@ -88,13 +103,15 @@
 
   if (prevButton) {
     prevButton.addEventListener("click", function () {
-      goTo(activeIndex - 1);
+      setActive(activeIndex - 1, "prev");
+      startTimer();
     });
   }
 
   if (nextButton) {
     nextButton.addEventListener("click", function () {
-      goTo(activeIndex + 1);
+      setActive(activeIndex + 1, "next");
+      startTimer();
     });
   }
 
@@ -128,10 +145,9 @@
   }
 
   if (prefersReducedMotion) {
-    visualTrack.style.transition = "none";
-    copyTrack.style.transition = "none";
+    carousel.classList.add("feature-carousel--reduced-motion");
   }
 
-  setActive(0);
+  setAria(activeIndex);
   syncCopyHeight();
 })();
