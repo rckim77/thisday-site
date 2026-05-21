@@ -1,6 +1,7 @@
 ---
 layout: legal
 title: Privacy Policy
+description: Privacy Policy for This Day, the iOS photo cleanup app. What data we access, how we use it, and your choices.
 permalink: /
 ---
 

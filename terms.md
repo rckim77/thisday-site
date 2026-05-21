@@ -1,6 +1,7 @@
 ---
 layout: legal
 title: Terms of Use
+description: Terms of Use for the This Day iOS app, including subscriptions, photo library use, and your responsibilities.
 permalink: /terms/
 redirect_from:
   - /terms.html
