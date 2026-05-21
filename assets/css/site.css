@@ -263,12 +263,13 @@ a:hover {
 .app-store-badge {
   display: inline-block;
   line-height: 0;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
 }
 
 .app-store-badge:hover {
   transform: scale(1.03);
   opacity: 0.92;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.16));
 }
 
 .app-store-badge img {
