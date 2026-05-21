@@ -39,8 +39,16 @@ Framed iPhone 17 Pro screenshots are generated from the This Day app repo:
 ./scripts/prepare-assets.swift
 ```
 
-Requires the `thisday` and `app-store-slides-tool` checkouts at the paths used in that script.
+By default, the script looks for sibling checkouts at `../thisday` and `../app-store-slides-tool`. Override those paths when needed:
+
+```bash
+THISDAY_APP_ROOT=/path/to/thisday \
+APP_STORE_SLIDES_TOOL_ROOT=/path/to/app-store-slides-tool \
+./scripts/prepare-assets.swift
+```
 
 ## Deploy
 
 Push to `main`; GitHub Pages builds automatically.
+
+**Important:** This repository must remain public for GitHub Pages to serve the site. Do not make the repo private unless GitHub Pages hosting has been moved to a plan or setup that supports private repositories.

@@ -12,8 +12,19 @@ struct FrameConfig {
 }
 
 let projectRoot = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
-let thisdayRoot = URL(fileURLWithPath: "/Users/raykim/Desktop/Development/thisday")
-let slidesToolRoot = URL(fileURLWithPath: "/Users/raykim/Desktop/Development/app-store-slides-tool")
+
+func checkoutURL(environmentKey: String, siblingName: String) -> URL {
+    if let override = ProcessInfo.processInfo.environment[environmentKey], !override.isEmpty {
+        return URL(fileURLWithPath: (override as NSString).expandingTildeInPath)
+    }
+
+    return projectRoot
+        .deletingLastPathComponent()
+        .appendingPathComponent(siblingName)
+}
+
+let thisdayRoot = checkoutURL(environmentKey: "THISDAY_APP_ROOT", siblingName: "thisday")
+let slidesToolRoot = checkoutURL(environmentKey: "APP_STORE_SLIDES_TOOL_ROOT", siblingName: "app-store-slides-tool")
 
 let rawScreenshotRoot = thisdayRoot
     .appendingPathComponent("build/AppStore/v1.10.1/en_US/iphone/raw")
