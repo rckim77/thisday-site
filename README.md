@@ -1,14 +1,18 @@
-# This Day — Website
+# this day website
 
-Marketing landing page and legal pages for the [This Day](https://apps.apple.com/us/app/this-day-photo-cleaner/id6758584686) iOS app, hosted on GitHub Pages.
+Website for the [This Day](https://apps.apple.com/us/app/this-day-photo-cleaner/id6758584686) iOS app, hosted on GitHub Pages.
+
+**URL:** [https://rckim77.github.io/thisday-site](https://rckim77.github.io/thisday-site)
 
 ## Pages
 
-| Path | Content |
-|------|---------|
-| `/` | Privacy Policy (in-app privacy URL) |
-| `/app/` | Marketing landing page |
-| `/terms/` | Terms of Use |
+
+| Path      | Content                             |
+| --------- | ----------------------------------- |
+| `/`       | Privacy Policy (in-app privacy URL) |
+| `/app/`   | Marketing landing page              |
+| `/terms/` | Terms of Use                        |
+
 
 ## Local preview
 
@@ -21,9 +25,9 @@ bundle exec jekyll serve
 
 Then open in your browser:
 
-- **Landing page:** http://127.0.0.1:4000/thisday-site/app/
-- **Privacy policy:** http://127.0.0.1:4000/thisday-site/
-- **Terms:** http://127.0.0.1:4000/thisday-site/terms/
+- **Landing page:** [http://127.0.0.1:4000/thisday-site/app/](http://127.0.0.1:4000/thisday-site/app/)
+- **Privacy policy:** [http://127.0.0.1:4000/thisday-site/](http://127.0.0.1:4000/thisday-site/)
+- **Terms:** [http://127.0.0.1:4000/thisday-site/terms/](http://127.0.0.1:4000/thisday-site/terms/)
 
 The server auto-rebuilds when you save files. Stop it with `Ctrl+C` in the terminal.
 
