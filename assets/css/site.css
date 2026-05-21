@@ -361,37 +361,52 @@ a:hover {
 
 /* Feature carousel */
 
-.feature-carousel {
+.section--features {
   background: #fff;
-  border: 1px solid #e4e9f0;
-  border-radius: calc(var(--radius) + 4px);
-  padding: clamp(1.25rem, 3vw, 2rem);
-  box-shadow: 0 18px 48px rgba(15, 20, 25, 0.06);
 }
 
-.feature-carousel-layout {
+.section--features .section-header {
+  margin-bottom: 2rem;
+}
+
+.feature-carousel {
+  width: 100%;
   display: grid;
   gap: 2rem;
   align-items: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
 }
 
 @media (min-width: 900px) {
-  .feature-carousel-layout {
+  .feature-carousel {
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: var(--page-gutter);
   }
 }
 
-.feature-carousel-visual {
+.feature-visual {
   overflow: hidden;
-  position: relative;
 }
 
-.feature-slide-track,
-.feature-copy-track {
+.feature-copy-slider {
+  overflow: hidden;
+  transition: min-height 0.35s ease;
+}
+
+.feature-track {
   display: flex;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
+}
+
+.feature-track[data-feature-copy-track] {
+  align-items: flex-start;
 }
 
 .feature-slide {
@@ -400,26 +415,28 @@ a:hover {
   margin: 0;
 }
 
-.feature-copy-viewport {
-  overflow: hidden;
-  transition: min-height 0.35s ease;
-}
-
-.feature-copy-track {
-  align-items: flex-start;
-}
-
 .feature-panel {
   flex: 0 0 100%;
   min-width: 100%;
   box-sizing: border-box;
-  padding-right: 0.25rem;
 }
 
-.feature-carousel-copy {
+.feature-copy {
   display: grid;
-  gap: 1.5rem;
-  align-content: center;
+  gap: 1.25rem;
+  padding-inline: var(--page-gutter);
+  max-width: var(--max-width);
+  margin-inline: auto;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .feature-copy {
+    padding-inline: 0;
+    max-width: none;
+    margin-inline: 0;
+    width: auto;
+  }
 }
 
 .feature-kicker {
@@ -444,7 +461,7 @@ a:hover {
   line-height: 1.6;
 }
 
-.feature-carousel-controls {
+.feature-controls {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -811,23 +828,14 @@ a:hover {
   }
 
   .feature-carousel {
-    padding: 1rem;
-  }
-
-  .feature-carousel-layout {
     gap: 1.5rem;
   }
 
-  .feature-carousel-visual {
-    min-height: 0;
-  }
-
-  .feature-carousel-copy {
-    min-height: 0;
+  .feature-copy {
     text-align: center;
   }
 
-  .feature-carousel-controls {
+  .feature-controls {
     justify-content: center;
   }
 
@@ -946,12 +954,11 @@ a:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .feature-slide-track,
-  .feature-copy-track {
+  .feature-track {
     transition: none;
   }
 
-  .feature-copy-viewport {
+  .feature-copy-slider {
     transition: none;
   }
 }

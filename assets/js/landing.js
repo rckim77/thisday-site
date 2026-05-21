@@ -4,13 +4,13 @@
 
   var visualTrack = carousel.querySelector("[data-feature-visual-track]");
   var copyTrack = carousel.querySelector("[data-feature-copy-track]");
-  var copyViewport = carousel.querySelector(".feature-copy-viewport");
   var visualSlides = visualTrack
     ? Array.prototype.slice.call(visualTrack.querySelectorAll("[data-feature-slide]"))
     : [];
   var copySlides = copyTrack
     ? Array.prototype.slice.call(copyTrack.querySelectorAll("[data-feature-slide]"))
     : [];
+  var copySlider = carousel.querySelector(".feature-copy-slider");
   var dots = Array.prototype.slice.call(
     carousel.querySelectorAll("[data-feature-dot]")
   );
@@ -32,10 +32,10 @@
   }
 
   function syncCopyHeight() {
-    if (!copyViewport) return;
+    if (!copySlider) return;
     var activePanel = copySlides[activeIndex];
     if (!activePanel) return;
-    copyViewport.style.minHeight = activePanel.offsetHeight + "px";
+    copySlider.style.minHeight = activePanel.offsetHeight + "px";
   }
 
   function setAria(index) {

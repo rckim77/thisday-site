@@ -36,86 +36,84 @@ permalink: /app/
   </div>
 </section>
 
-<section id="features" class="section">
+<section id="features" class="section section--features">
   <div class="container">
     <header class="section-header">
       <h2>Features</h2>
     </header>
+  </div>
 
-    <div class="feature-carousel" data-feature-carousel>
-      <div class="feature-carousel-layout">
-        <div class="feature-carousel-visual">
-          <div class="feature-slide-track" data-feature-visual-track>
-            <figure class="feature-slide" data-feature-slide>
-              <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-live-photos.png' | relative_url }}" alt="Convert Live Photos to stills to save storage" width="405" height="828">
-            </figure>
-            <figure class="feature-slide" data-feature-slide>
-              <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-daily-review.png' | relative_url }}" alt="Gallery of photos from today's date in past years" width="405" height="828">
-            </figure>
-            <figure class="feature-slide" data-feature-slide>
-              <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-duplicates.png' | relative_url }}" alt="Review and delete exact duplicate photos" width="405" height="828">
-            </figure>
-            <figure class="feature-slide" data-feature-slide>
-              <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-reminders.png' | relative_url }}" alt="Daily reminder settings in This Day" width="405" height="828">
-            </figure>
-            <figure class="feature-slide" data-feature-slide>
-              <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-milestones.png' | relative_url }}" alt="Storage milestones and achievements" width="405" height="828">
-            </figure>
-            <figure class="feature-slide" data-feature-slide>
-              <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-memories.png' | relative_url }}" alt="Relive and share memories from past years" width="405" height="828">
-            </figure>
-          </div>
+  <div class="feature-carousel" data-feature-carousel>
+    <div class="feature-visual">
+      <div class="feature-track" data-feature-visual-track>
+        <figure class="feature-slide" data-feature-slide>
+          <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-live-photos.png' | relative_url }}" alt="Convert Live Photos to stills to save storage" width="405" height="828">
+        </figure>
+        <figure class="feature-slide" data-feature-slide>
+          <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-daily-review.png' | relative_url }}" alt="Gallery of photos from today's date in past years" width="405" height="828">
+        </figure>
+        <figure class="feature-slide" data-feature-slide>
+          <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-duplicates.png' | relative_url }}" alt="Review and delete exact duplicate photos" width="405" height="828">
+        </figure>
+        <figure class="feature-slide" data-feature-slide>
+          <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-reminders.png' | relative_url }}" alt="Daily reminder settings in This Day" width="405" height="828">
+        </figure>
+        <figure class="feature-slide" data-feature-slide>
+          <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-milestones.png' | relative_url }}" alt="Storage milestones and achievements" width="405" height="828">
+        </figure>
+        <figure class="feature-slide" data-feature-slide>
+          <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-memories.png' | relative_url }}" alt="Relive and share memories from past years" width="405" height="828">
+        </figure>
+      </div>
+    </div>
+
+    <div class="feature-copy">
+      <div class="feature-copy-slider">
+        <div class="feature-track" data-feature-copy-track>
+          <article class="feature-panel" data-feature-slide>
+            <p class="feature-kicker">Storage saver</p>
+            <h3>Convert Live Photos</h3>
+            <p>Turn Live Photos into stills to reclaim space without losing the shot you care about.</p>
+          </article>
+          <article class="feature-panel" data-feature-slide>
+            <p class="feature-kicker">Daily review</p>
+            <h3>One day at a time</h3>
+            <p>See only what you captured on today’s date across prior years—so each session stays short and manageable.</p>
+          </article>
+          <article class="feature-panel" data-feature-slide>
+            <p class="feature-kicker">Smart cleanup</p>
+            <h3>Delete duplicates</h3>
+            <p>Find exact duplicates in your results and remove them in bulk when you are ready.</p>
+          </article>
+          <article class="feature-panel" data-feature-slide>
+            <p class="feature-kicker">Stay on track</p>
+            <h3>Daily reminders</h3>
+            <p>Schedule a gentle nudge at the time that works for you and build a cleanup streak.</p>
+          </article>
+          <article class="feature-panel" data-feature-slide>
+            <p class="feature-kicker">Motivation</p>
+            <h3>Achieve milestones</h3>
+            <p>Celebrate storage you have reclaimed with progress milestones that make habit-building satisfying.</p>
+          </article>
+          <article class="feature-panel" data-feature-slide>
+            <p class="feature-kicker">Your library</p>
+            <h3>Relive memories</h3>
+            <p>Keep the photos that matter, share favorites through the iOS share sheet, and delete only when you confirm.</p>
+          </article>
         </div>
+      </div>
 
-        <div class="feature-carousel-copy">
-          <div class="feature-copy-viewport">
-            <div class="feature-copy-track" data-feature-copy-track>
-              <article class="feature-panel" data-feature-slide>
-                <p class="feature-kicker">Storage saver</p>
-                <h3>Convert Live Photos</h3>
-                <p>Turn Live Photos into stills to reclaim space without losing the shot you care about.</p>
-              </article>
-              <article class="feature-panel" data-feature-slide>
-                <p class="feature-kicker">Daily review</p>
-                <h3>One day at a time</h3>
-                <p>See only what you captured on today’s date across prior years—so each session stays short and manageable.</p>
-              </article>
-              <article class="feature-panel" data-feature-slide>
-                <p class="feature-kicker">Smart cleanup</p>
-                <h3>Delete duplicates</h3>
-                <p>Find exact duplicates in your results and remove them in bulk when you are ready.</p>
-              </article>
-              <article class="feature-panel" data-feature-slide>
-                <p class="feature-kicker">Stay on track</p>
-                <h3>Daily reminders</h3>
-                <p>Schedule a gentle nudge at the time that works for you and build a cleanup streak.</p>
-              </article>
-              <article class="feature-panel" data-feature-slide>
-                <p class="feature-kicker">Motivation</p>
-                <h3>Achieve milestones</h3>
-                <p>Celebrate storage you have reclaimed with progress milestones that make habit-building satisfying.</p>
-              </article>
-              <article class="feature-panel" data-feature-slide>
-                <p class="feature-kicker">Your library</p>
-                <h3>Relive memories</h3>
-                <p>Keep the photos that matter, share favorites through the iOS share sheet, and delete only when you confirm.</p>
-              </article>
-            </div>
-          </div>
-
-          <div class="feature-carousel-controls" aria-label="Feature carousel controls">
-            <button type="button" class="feature-nav" data-feature-prev aria-label="Previous feature">←</button>
-            <div class="feature-dots" role="tablist" aria-label="Features">
-              <button type="button" class="feature-dot is-active" data-feature-dot role="tab" aria-selected="true" aria-label="Convert Live Photos"></button>
-              <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="One day at a time"></button>
-              <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Delete duplicates"></button>
-              <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Daily reminders"></button>
-              <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Achieve milestones"></button>
-              <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Relive memories"></button>
-            </div>
-            <button type="button" class="feature-nav" data-feature-next aria-label="Next feature">→</button>
-          </div>
+      <div class="feature-controls" aria-label="Feature carousel controls">
+        <button type="button" class="feature-nav" data-feature-prev aria-label="Previous feature">←</button>
+        <div class="feature-dots" role="tablist" aria-label="Features">
+          <button type="button" class="feature-dot is-active" data-feature-dot role="tab" aria-selected="true" aria-label="Convert Live Photos"></button>
+          <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="One day at a time"></button>
+          <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Delete duplicates"></button>
+          <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Daily reminders"></button>
+          <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Achieve milestones"></button>
+          <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Relive memories"></button>
         </div>
+        <button type="button" class="feature-nav" data-feature-next aria-label="Next feature">→</button>
       </div>
     </div>
   </div>
