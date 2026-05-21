@@ -1,4 +1,4 @@
-<span class="brand-icon">
+<span class="brand-icon{% if include.promo %} brand-icon--promo{% endif %}">
   <img
     class="app-icon{% if include.large %} app-icon--lg{% endif %}"
     src="{{ '/assets/images/app-icon.png' | relative_url }}"
