@@ -8,7 +8,6 @@ permalink: /app/
   <div class="container hero-grid">
     <div class="hero-copy">
       {% include brand.html large=true width="80" height="80" %}
-      <p class="hero-eyebrow">iOS photo cleanup</p>
       <h1>Turn decluttering into a daily habit</h1>
       <p class="hero-lead">
         This Day shows photos and videos from this calendar day in past years—so you can review memories in small batches, free up storage, and never feel overwhelmed by your whole library.
@@ -17,7 +16,6 @@ permalink: /app/
         <a class="app-store-badge" href="https://apps.apple.com/us/app/this-day-photo-cleaner/id6758584686" rel="noopener" aria-label="Download on the App Store">
           <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" width="250" height="83">
         </a>
-        <p class="hero-note">Free for iPhone and iPad · iOS 26+ · Optional Premium subscription</p>
       </div>
       <p class="hero-press">
         <span class="hero-press-label">Featured in 9to5Mac</span>
@@ -41,18 +39,17 @@ permalink: /app/
 <section id="features" class="section">
   <div class="container">
     <header class="section-header">
-      <h2>Everything you need to tidy up—without the guilt trip</h2>
-      <p>Built for real libraries. Designed to feel calm, focused, and fast.</p>
+      <h2>Features</h2>
     </header>
 
     <div class="feature-carousel" data-feature-carousel>
       <div class="feature-carousel-layout">
         <div class="feature-carousel-visual">
           <figure class="feature-slide" data-feature-slide aria-hidden="false">
-            <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-daily-review.png' | relative_url }}" alt="Gallery of photos from today's date in past years" width="405" height="828">
+            <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-live-photos.png' | relative_url }}" alt="Convert Live Photos to stills to save storage" width="405" height="828">
           </figure>
           <figure class="feature-slide" data-feature-slide hidden aria-hidden="true">
-            <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-live-photos.png' | relative_url }}" alt="Convert Live Photos to stills to save storage" width="405" height="828">
+            <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-daily-review.png' | relative_url }}" alt="Gallery of photos from today's date in past years" width="405" height="828">
           </figure>
           <figure class="feature-slide" data-feature-slide hidden aria-hidden="true">
             <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-duplicates.png' | relative_url }}" alt="Review and delete exact duplicate photos" width="405" height="828">
@@ -70,14 +67,14 @@ permalink: /app/
 
         <div class="feature-carousel-copy">
           <article class="feature-panel" data-feature-slide aria-hidden="false">
-            <p class="feature-kicker">Daily review</p>
-            <h3>One day at a time</h3>
-            <p>See only what you captured on today’s date across prior years—so each session stays short and manageable.</p>
-          </article>
-          <article class="feature-panel" data-feature-slide hidden aria-hidden="true">
             <p class="feature-kicker">Storage saver</p>
             <h3>Convert Live Photos</h3>
             <p>Turn Live Photos into stills to reclaim space without losing the shot you care about.</p>
+          </article>
+          <article class="feature-panel" data-feature-slide hidden aria-hidden="true">
+            <p class="feature-kicker">Daily review</p>
+            <h3>One day at a time</h3>
+            <p>See only what you captured on today’s date across prior years—so each session stays short and manageable.</p>
           </article>
           <article class="feature-panel" data-feature-slide hidden aria-hidden="true">
             <p class="feature-kicker">Smart cleanup</p>
@@ -103,8 +100,8 @@ permalink: /app/
           <div class="feature-carousel-controls" aria-label="Feature carousel controls">
             <button type="button" class="feature-nav" data-feature-prev aria-label="Previous feature">←</button>
             <div class="feature-dots" role="tablist" aria-label="Features">
-              <button type="button" class="feature-dot is-active" data-feature-dot role="tab" aria-selected="true" aria-label="One day at a time"></button>
-              <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Convert Live Photos"></button>
+              <button type="button" class="feature-dot is-active" data-feature-dot role="tab" aria-selected="true" aria-label="Convert Live Photos"></button>
+              <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="One day at a time"></button>
               <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Delete duplicates"></button>
               <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Daily reminders"></button>
               <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Achieve milestones"></button>
@@ -118,37 +115,34 @@ permalink: /app/
   </div>
 </section>
 
-<section id="how-it-works" class="section section--alt">
+<section id="premium" class="section section--alt">
   <div class="container">
     <header class="section-header">
-      <h2>How it works</h2>
-      <p>A few minutes a day beats an all-weekend photo purge.</p>
+      <h2>Premium</h2>
+      <p>Go further with an optional subscription—cancel anytime in your Apple Account settings.</p>
     </header>
-    <div class="how-steps">
-      <article class="how-step">
-        <div class="how-step-copy">
-          <span class="how-step-number">1</span>
-          <h3>Open today’s memories</h3>
-          <p>Grant Photos access once. This Day surfaces shots from this day in previous years—ready to swipe through.</p>
-        </div>
-        <img class="device-frame device-frame--how" src="{{ '/assets/images/devices/how-open-memories.png' | relative_url }}" alt="This Day gallery for today's date across prior years" width="324" height="662" loading="lazy">
-      </article>
-      <article class="how-step how-step--reverse">
-        <div class="how-step-copy">
-          <span class="how-step-number">2</span>
-          <h3>Keep, share, or delete</h3>
-          <p>Review thumbnails at your pace. Delete in bulk when you’re sure, or share favorites through the system share sheet.</p>
-        </div>
-        <img class="device-frame device-frame--how" src="{{ '/assets/images/devices/how-review-delete.png' | relative_url }}" alt="Review duplicates and delete unwanted photos" width="324" height="662" loading="lazy">
-      </article>
-      <article class="how-step">
-        <div class="how-step-copy">
-          <span class="how-step-number">3</span>
-          <h3>Come back tomorrow</h3>
-          <p>Set a daily reminder, build a streak, and watch your reclaimed storage grow—without touching tens of thousands of photos at once.</p>
-        </div>
-        <img class="device-frame device-frame--how" src="{{ '/assets/images/devices/how-daily-habit.png' | relative_url }}" alt="Daily reminder settings to build a cleanup habit" width="324" height="662" loading="lazy">
-      </article>
+    <div class="premium-layout">
+      <div class="premium-copy">
+        <p class="premium-intro">Unlock Premium Access to get the most out of your library cleanup:</p>
+        <ul class="premium-list">
+          <li>Load all your past memories</li>
+          <li>Convert unlimited Live Photos</li>
+          <li>Delete unlimited duplicates</li>
+          <li>Filter by more options (e.g., video only)</li>
+          <li>Unlock premium app icons</li>
+        </ul>
+        <p class="premium-pricing">Plans from <strong>$2.49/mo</strong> billed yearly ($29.99/yr) or <strong>$3.99/mo</strong> monthly. A free trial may be available with the annual plan.</p>
+      </div>
+      <figure class="premium-visual">
+        <img
+          class="device-frame device-frame--premium"
+          src="{{ '/assets/images/devices/premium-paywall.png' | relative_url }}"
+          alt="This Day Premium subscription screen showing yearly and monthly plans"
+          width="405"
+          height="828"
+          loading="lazy"
+        >
+      </figure>
     </div>
   </div>
 </section>
@@ -157,7 +151,6 @@ permalink: /app/
   <div class="container">
     <header class="section-header">
       <h2>Your photos never leave your phone</h2>
-      <p>We built This Day for people who care where their memories go.</p>
     </header>
     <div class="trust-grid">
       <div class="trust-item">

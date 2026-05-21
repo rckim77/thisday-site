@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>{{ page.title | default: site.title }} — Photo cleanup, one day at a time</title>
   <meta name="description" content="{{ site.description }}">
   <meta name="theme-color" content="#4a8fd4">
@@ -26,13 +26,12 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="{{ '/app/' | relative_url }}">
-        {% include brand.html %}
-        <span class="brand-name">This Day</span>
+      <a class="brand brand--text-only" href="{{ '/app/' | relative_url }}">
+        <span class="brand-name">this day</span>
       </a>
       <nav class="header-nav" aria-label="Site">
         <a href="{{ '/app/' | relative_url }}#features">Features</a>
-        <a href="{{ '/app/' | relative_url }}#how-it-works">How it works</a>
+        <a href="{{ '/app/' | relative_url }}#premium">Premium</a>
         <a href="{{ '/' | relative_url }}">Privacy</a>
         <a href="{{ '/terms' | relative_url }}">Terms</a>
       </nav>
@@ -46,12 +45,8 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a class="footer-brand-link" href="{{ '/app/' | relative_url }}">
+        <a class="footer-brand-link footer-brand-link--icon-only" href="{{ '/app/' | relative_url }}" aria-label="This Day home">
           {% include brand.html width="32" height="32" %}
-          <span>
-            <strong>This Day</strong>
-            <p>Photo cleanup, one day at a time.</p>
-          </span>
         </a>
       </div>
       <nav class="footer-nav" aria-label="Legal and support">
@@ -59,7 +54,7 @@
         <a href="{{ '/terms' | relative_url }}">Terms of Use</a>
         <a href="mailto:daydreamiosapp@gmail.com">Contact</a>
       </nav>
-      <p class="footer-copy">&copy; {{ 'now' | date: '%Y' }} Raymond Kim. All rights reserved.</p>
+      <p class="footer-copy">&copy; {{ 'now' | date: '%Y' }} Ray Kim. All rights reserved.</p>
     </div>
   </footer>
 </body>

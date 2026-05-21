@@ -150,7 +150,12 @@ func makeIconTransparent(source: URL, destination: URL) throws {
 }
 
 func writeFramedScreenshot(rawName: String, outputName: String) throws {
-    let screenshot = try loadImage(rawScreenshotRoot.appendingPathComponent(rawName).path)
+    let screenshotURL = rawScreenshotRoot.appendingPathComponent(rawName)
+    try writeFramedScreenshot(at: screenshotURL, outputName: outputName)
+}
+
+func writeFramedScreenshot(at screenshotURL: URL, outputName: String) throws {
+    let screenshot = try loadImage(screenshotURL.path)
     let frame = try loadImage(iphoneFrame.imagePath)
     let composite = try compositeDevice(screenshot: screenshot, frame: frame, config: iphoneFrame)
     let outputURL = devicesRoot.appendingPathComponent(outputName)
@@ -179,6 +184,11 @@ do {
 
     for (raw, output) in framed {
         try writeFramedScreenshot(rawName: raw, outputName: output)
+    }
+
+    let paywallRaw = projectRoot.appendingPathComponent("assets/images/raw/premium-paywall.png")
+    if FileManager.default.fileExists(atPath: paywallRaw.path) {
+        try writeFramedScreenshot(at: paywallRaw, outputName: "premium-paywall.png")
     }
 } catch {
     fputs("error: \(error.localizedDescription)\n", stderr)
