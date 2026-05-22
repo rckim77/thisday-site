@@ -797,32 +797,26 @@ a:hover {
   line-height: 0;
 }
 
-/* Privacy page promo */
+/* Temporary: remove ~June 2026 — / used to host the privacy policy */
 
-.legal-promo {
+.landing-reloc-banner {
   background: linear-gradient(135deg, #e8f1fc 0%, #f4f6f9 100%);
   border-bottom: 1px solid #d8e3f0;
 }
 
-.legal-promo-inner {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.landing-reloc-banner-inner {
   padding: 0.85rem 0;
 }
 
-.legal-promo-inner p {
+.landing-reloc-banner-inner p {
   margin: 0;
   font-size: 0.95rem;
   color: var(--text-primary);
+  text-align: center;
 }
 
-.legal-promo-inner a {
+.landing-reloc-banner-inner a {
   font-weight: 600;
-}
-
-.legal-promo .brand-icon {
-  flex-shrink: 0;
 }
 
 .footer-nav {

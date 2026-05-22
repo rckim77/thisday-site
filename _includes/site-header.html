@@ -1,16 +1,16 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand brand--text-only" href="{{ '/app/' | relative_url }}">
+    <a class="brand brand--text-only" href="{{ '/' | relative_url }}">
       <span class="brand-name">this day</span>
     </a>
     <nav class="header-nav" aria-label="Site">
       {% if page.layout == 'landing' %}
-        <a href="{{ '/app/' | relative_url }}#features">Features</a>
-        <a href="{{ '/app/' | relative_url }}#premium">Premium</a>
+        <a href="{{ '/' | relative_url }}#features">Features</a>
+        <a href="{{ '/' | relative_url }}#premium">Premium</a>
       {% else %}
-        <a href="{{ '/app/' | relative_url }}">App</a>
+        <a href="{{ '/' | relative_url }}">App</a>
       {% endif %}
-      <a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}>Privacy</a>
+      <a href="{{ '/privacy/' | relative_url }}"{% if page.url contains 'privacy' %} aria-current="page"{% endif %}>Privacy</a>
       <a href="{{ '/terms' | relative_url }}"{% if page.url contains 'terms' %} aria-current="page"{% endif %}>Terms</a>
     </nav>
   </div>

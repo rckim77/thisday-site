@@ -27,6 +27,13 @@
 
   {% include site-header.html %}
 
+  {% comment %} Temporary: remove ~June 2026 — / used to host the privacy policy {% endcomment %}
+  <div class="landing-reloc-banner" role="status">
+    <div class="container landing-reloc-banner-inner">
+      <p>Looking for our <strong>Privacy Policy</strong>? It moved to <a href="{{ '/privacy/' | relative_url }}">the privacy page</a>.</p>
+    </div>
+  </div>
+
   <main id="main">
     {{ content }}
   </main>
@@ -34,12 +41,12 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a class="footer-brand-link footer-brand-link--icon-only" href="{{ '/app/' | relative_url }}" aria-label="This Day home">
+        <a class="footer-brand-link footer-brand-link--icon-only" href="{{ '/' | relative_url }}" aria-label="This Day home">
           {% include brand.html width="32" height="32" %}
         </a>
       </div>
       <nav class="footer-nav" aria-label="Legal and support">
-        <a href="{{ '/' | relative_url }}">Privacy Policy</a>
+        <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>
         <a href="{{ '/terms' | relative_url }}">Terms of Use</a>
         <a href="mailto:daydreamiosapp@gmail.com">Contact</a>
       </nav>
