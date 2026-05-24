@@ -35,7 +35,7 @@ You are responsible for reviewing photos and videos before deleting them. Deleti
 
 ## 5. Privacy
 
-Your use of This Day is also governed by our [Privacy Policy]({{ '/' | relative_url }}).
+Your use of This Day is also governed by our [Privacy Policy]({{ '/privacy/' | relative_url }}).
 
 ## 6. Apple Terms
 

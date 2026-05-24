@@ -7,11 +7,11 @@ Website for the [This Day](https://apps.apple.com/us/app/this-day-photo-cleaner/
 ## Pages
 
 
-| Path      | Content                             |
-| --------- | ----------------------------------- |
-| `/`       | Privacy Policy (in-app privacy URL) |
-| `/app/`   | Marketing landing page              |
-| `/terms/` | Terms of Use                        |
+| Path        | Content                             |
+| ----------- | ----------------------------------- |
+| `/`         | Marketing landing page              |
+| `/privacy/` | Privacy Policy (in-app privacy URL) |
+| `/terms/`   | Terms of Use                        |
 
 
 ## Local preview
@@ -25,8 +25,8 @@ bundle exec jekyll serve
 
 Then open in your browser:
 
-- **Landing page:** [http://127.0.0.1:4000/thisday-site/app/](http://127.0.0.1:4000/thisday-site/app/)
-- **Privacy policy:** [http://127.0.0.1:4000/thisday-site/](http://127.0.0.1:4000/thisday-site/)
+- **Landing page:** [http://127.0.0.1:4000/thisday-site/](http://127.0.0.1:4000/thisday-site/)
+- **Privacy policy:** [http://127.0.0.1:4000/thisday-site/privacy/](http://127.0.0.1:4000/thisday-site/privacy/)
 - **Terms:** [http://127.0.0.1:4000/thisday-site/terms/](http://127.0.0.1:4000/thisday-site/terms/)
 
 The server auto-rebuilds when you save files. Stop it with `Ctrl+C` in the terminal.
