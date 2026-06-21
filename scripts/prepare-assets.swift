@@ -26,8 +26,19 @@ func checkoutURL(environmentKey: String, siblingName: String) -> URL {
 let thisdayRoot = checkoutURL(environmentKey: "THISDAY_APP_ROOT", siblingName: "thisday")
 let slidesToolRoot = checkoutURL(environmentKey: "APP_STORE_SLIDES_TOOL_ROOT", siblingName: "app-store-slides-tool")
 
+let screenshotVersion = ProcessInfo.processInfo.environment["THISDAY_SCREENSHOT_VERSION"] ?? "v1.16.0"
+let screenshotDevice = ProcessInfo.processInfo.environment["THISDAY_SCREENSHOT_DEVICE"] ?? "iphone"
+let screenshotLocale = ProcessInfo.processInfo.environment["THISDAY_SCREENSHOT_LOCALE"] ?? "en_US"
+let framedOutputWidth = CGFloat(
+    Double(ProcessInfo.processInfo.environment["THISDAY_FRAMED_OUTPUT_WIDTH"] ?? "1085") ?? 1085
+)
+
 let rawScreenshotRoot = thisdayRoot
-    .appendingPathComponent("build/AppStore/v1.10.1/en_US/iphone/raw")
+    .appendingPathComponent("build/AppStore")
+    .appendingPathComponent(screenshotVersion)
+    .appendingPathComponent(screenshotDevice)
+    .appendingPathComponent(screenshotLocale)
+    .appendingPathComponent("raw")
 let assetsRoot = projectRoot.appendingPathComponent("assets/images")
 let devicesRoot = assetsRoot.appendingPathComponent("devices")
 
@@ -110,6 +121,49 @@ func compositeDevice(screenshot: NSImage, frame: NSImage, config: FrameConfig) t
     return output
 }
 
+func resizedImage(_ image: NSImage, maxPixelWidth: CGFloat) throws -> NSImage {
+    guard maxPixelWidth > 0, image.size.width > maxPixelWidth else {
+        return image
+    }
+
+    let scale = maxPixelWidth / image.size.width
+    let targetSize = NSSize(
+        width: maxPixelWidth.rounded(),
+        height: (image.size.height * scale).rounded()
+    )
+
+    guard let bitmap = NSBitmapImageRep(
+        bitmapDataPlanes: nil,
+        pixelsWide: Int(targetSize.width),
+        pixelsHigh: Int(targetSize.height),
+        bitsPerSample: 8,
+        samplesPerPixel: 4,
+        hasAlpha: true,
+        isPlanar: false,
+        colorSpaceName: .deviceRGB,
+        bytesPerRow: 0,
+        bitsPerPixel: 0
+    ), let context = NSGraphicsContext(bitmapImageRep: bitmap) else {
+        throw NSError(domain: "prepare-assets", code: 6, userInfo: [NSLocalizedDescriptionKey: "Resize bitmap allocation failed"])
+    }
+
+    let previous = NSGraphicsContext.current
+    NSGraphicsContext.current = context
+    defer {
+        context.flushGraphics()
+        NSGraphicsContext.current = previous
+    }
+
+    context.imageInterpolation = .high
+    NSColor.clear.setFill()
+    NSRect(origin: .zero, size: targetSize).fill()
+    image.draw(in: NSRect(origin: .zero, size: targetSize), from: .zero, operation: .sourceOver, fraction: 1)
+
+    let output = NSImage(size: targetSize)
+    output.addRepresentation(bitmap)
+    return output
+}
+
 func makeIconTransparent(source: URL, destination: URL) throws {
     let image = try loadImage(source.path)
     let width = Int(image.size.width.rounded())
@@ -169,8 +223,9 @@ func writeFramedScreenshot(at screenshotURL: URL, outputName: String) throws {
     let screenshot = try loadImage(screenshotURL.path)
     let frame = try loadImage(iphoneFrame.imagePath)
     let composite = try compositeDevice(screenshot: screenshot, frame: frame, config: iphoneFrame)
+    let output = try resizedImage(composite, maxPixelWidth: framedOutputWidth)
     let outputURL = devicesRoot.appendingPathComponent(outputName)
-    try pngData(from: composite).write(to: outputURL, options: .atomic)
+    try pngData(from: output).write(to: outputURL, options: .atomic)
     print("Wrote \(outputURL.path)")
 }
 
@@ -185,12 +240,13 @@ do {
         ("01-gallery-multiselect.png", "feature-daily-review.png"),
         ("02-live-photos-convert.png", "feature-live-photos.png"),
         ("03-duplicates-review.png", "feature-duplicates.png"),
-        ("04-settings-daily-reminders.png", "feature-reminders.png"),
+        ("04-achievements.png", "feature-achievements.png"),
+        ("04-achievements.png", "feature-reminders.png"),
         ("05-achieve-milestones.png", "feature-milestones.png"),
         ("06-relive-memories.png", "feature-memories.png"),
         ("01-gallery-multiselect.png", "how-open-memories.png"),
         ("03-duplicates-review.png", "how-review-delete.png"),
-        ("04-settings-daily-reminders.png", "how-daily-habit.png")
+        ("04-achievements.png", "how-daily-habit.png")
     ]
 
     for (raw, output) in framed {

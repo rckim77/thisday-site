@@ -33,17 +33,20 @@ The server auto-rebuilds when you save files. Stop it with `Ctrl+C` in the termi
 
 ### Regenerate screenshots
 
-Framed iPhone 17 Pro screenshots are generated from the This Day app repo:
+Framed iPhone 17 Pro screenshots are generated from the This Day app repo. By default, the script uses `build/AppStore/v1.16.0/iphone/en_US/raw` and emits 1085px-wide site assets:
 
 ```bash
 ./scripts/prepare-assets.swift
 ```
 
-By default, the script looks for sibling checkouts at `../thisday` and `../app-store-slides-tool`. Override those paths when needed:
+The script looks for sibling checkouts at `../thisday` and `../app-store-slides-tool`. Override those paths, or the screenshot source, when needed:
 
 ```bash
 THISDAY_APP_ROOT=/path/to/thisday \
 APP_STORE_SLIDES_TOOL_ROOT=/path/to/app-store-slides-tool \
+THISDAY_SCREENSHOT_VERSION=v1.16.0 \
+THISDAY_SCREENSHOT_DEVICE=iphone \
+THISDAY_SCREENSHOT_LOCALE=en_US \
 ./scripts/prepare-assets.swift
 ```
 

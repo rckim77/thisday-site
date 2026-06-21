@@ -7,13 +7,13 @@ redirect_from:
   - /terms.html
 ---
 
-Last updated: March 11, 2026
+Last updated: June 20, 2026
 
 These Terms of Use govern your use of the This Day iOS app and related services provided by Raymond Kim ("we", "us", or "our"). By using This Day, you agree to these Terms of Use.
 
 ## 1. The App
 
-This Day helps you review photos and videos from prior years and decide what to keep or delete from your Photos library.
+This Day helps you review photos and videos from prior years and decide what to keep, delete, convert, share, or add to albums in your Photos library.
 
 ## 2. Subscriptions
 
@@ -31,7 +31,7 @@ Premium features remain available only while your subscription is active. We may
 
 ## 4. User Responsibility
 
-You are responsible for reviewing photos and videos before deleting them. Deletion actions may affect your Photos library, device storage, or iCloud Photos account. You are responsible for maintaining any backups you want to keep.
+You are responsible for reviewing photos and videos before deleting, converting, sharing, or adding them to albums. Actions you take in This Day may affect your Photos library, device storage, albums, or iCloud Photos account. You are responsible for maintaining any backups you want to keep.
 
 ## 5. Privacy
 
