@@ -26,7 +26,7 @@ func checkoutURL(environmentKey: String, siblingName: String) -> URL {
 let thisdayRoot = checkoutURL(environmentKey: "THISDAY_APP_ROOT", siblingName: "thisday")
 let slidesToolRoot = checkoutURL(environmentKey: "APP_STORE_SLIDES_TOOL_ROOT", siblingName: "app-store-slides-tool")
 
-let screenshotVersion = ProcessInfo.processInfo.environment["THISDAY_SCREENSHOT_VERSION"] ?? "v1.16.0"
+let screenshotVersion = ProcessInfo.processInfo.environment["THISDAY_SCREENSHOT_VERSION"] ?? "v1.17.0"
 let screenshotDevice = ProcessInfo.processInfo.environment["THISDAY_SCREENSHOT_DEVICE"] ?? "iphone"
 let screenshotLocale = ProcessInfo.processInfo.environment["THISDAY_SCREENSHOT_LOCALE"] ?? "en_US"
 let framedOutputWidth = CGFloat(
@@ -238,15 +238,16 @@ do {
     let framed: [(String, String)] = [
         ("01-gallery-multiselect.png", "hero-gallery.png"),
         ("01-gallery-multiselect.png", "feature-daily-review.png"),
-        ("02-live-photos-convert.png", "feature-live-photos.png"),
-        ("03-duplicates-review.png", "feature-duplicates.png"),
-        ("04-achievements.png", "feature-achievements.png"),
-        ("04-achievements.png", "feature-reminders.png"),
-        ("05-achieve-milestones.png", "feature-milestones.png"),
+        ("02-similar-photos-review.png", "feature-similar-photos.png"),
+        ("03-live-photos-convert.png", "feature-live-photos.png"),
+        ("04-duplicates-review.png", "feature-duplicates.png"),
+        ("05-achievements.png", "feature-achievements.png"),
+        ("05-achievements.png", "feature-reminders.png"),
+        ("07-achieve-milestones.png", "feature-milestones.png"),
         ("06-relive-memories.png", "feature-memories.png"),
         ("01-gallery-multiselect.png", "how-open-memories.png"),
-        ("03-duplicates-review.png", "how-review-delete.png"),
-        ("04-achievements.png", "how-daily-habit.png")
+        ("04-duplicates-review.png", "how-review-delete.png"),
+        ("05-achievements.png", "how-daily-habit.png")
     ]
 
     for (raw, output) in framed {

@@ -42,6 +42,9 @@
       <div class="feature-visual">
         <div class="feature-visual-viewport" data-feature-visual-viewport>
           <figure class="feature-slide is-active" data-feature-visual-slide>
+            <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-similar-photos.png' | relative_url }}" alt="Swipe through similar photos and choose which shots to keep or delete" width="405" height="828">
+          </figure>
+          <figure class="feature-slide" data-feature-visual-slide>
             <img class="device-frame device-frame--feature" src="{{ '/assets/images/devices/feature-live-photos.png' | relative_url }}" alt="Convert Live Photos to stills to save storage" width="405" height="828">
           </figure>
           <figure class="feature-slide" data-feature-visual-slide>
@@ -69,7 +72,8 @@
           </svg>
         </button>
         <div class="feature-dots" role="tablist" aria-label="Features">
-          <button type="button" class="feature-dot is-active" data-feature-dot role="tab" aria-selected="true" aria-label="Convert Live Photos"></button>
+          <button type="button" class="feature-dot is-active" data-feature-dot role="tab" aria-selected="true" aria-label="Clean up similar photos"></button>
+          <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Convert Live Photos"></button>
           <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="One day at a time"></button>
           <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Delete duplicates"></button>
           <button type="button" class="feature-dot" data-feature-dot role="tab" aria-selected="false" aria-label="Streak achievements"></button>
@@ -86,6 +90,11 @@
       <div class="feature-copy">
         <div class="feature-copy-viewport" data-feature-copy-viewport>
           <article class="feature-panel is-active" data-feature-copy-slide>
+            <p class="feature-kicker">Smart cleanup</p>
+            <h3>Clean up similar photos</h3>
+            <p>Swipe through groups of near-matches, choose which shots to keep or delete, and review your choices before removing anything.</p>
+          </article>
+          <article class="feature-panel" data-feature-copy-slide>
             <p class="feature-kicker">Storage saver</p>
             <h3>Convert Live Photos</h3>
             <p>Turn Live Photos into stills to reclaim space without losing the shot you care about.</p>
@@ -141,6 +150,10 @@
           <li>
             <span class="premium-check" aria-hidden="true">✓</span>
             <span><strong>Delete unlimited duplicates</strong> — find and clear exact duplicates without hitting limits.</span>
+          </li>
+          <li>
+            <span class="premium-check" aria-hidden="true">✓</span>
+            <span><strong>Clean up unlimited similar photos</strong> — compare near-matches and keep only the shots you want.</span>
           </li>
           <li>
             <span class="premium-check" aria-hidden="true">✓</span>
