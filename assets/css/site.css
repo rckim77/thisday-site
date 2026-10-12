@@ -797,28 +797,6 @@ a:hover {
   line-height: 0;
 }
 
-/* Temporary: remove ~June 2026 — / used to host the privacy policy */
-
-.landing-reloc-banner {
-  background: linear-gradient(135deg, #e8f1fc 0%, #f4f6f9 100%);
-  border-bottom: 1px solid #d8e3f0;
-}
-
-.landing-reloc-banner-inner {
-  padding: 0.85rem 0;
-}
-
-.landing-reloc-banner-inner p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: var(--text-primary);
-  text-align: center;
-}
-
-.landing-reloc-banner-inner a {
-  font-weight: 600;
-}
-
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
