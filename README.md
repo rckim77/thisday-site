@@ -50,6 +50,10 @@ THISDAY_SCREENSHOT_LOCALE=en_US \
 ./scripts/prepare-assets.swift
 ```
 
+## Typography
+
+All site text uses DM Sans, including the header wordmark and legal pages. The normal and italic variable fonts (Latin subset, weights 100–1000) are self-hosted in `assets/fonts/` from [Google Fonts](https://fonts.google.com/specimen/DM+Sans), with the SIL Open Font License included in `assets/fonts/OFL.txt`.
+
 ## Deploy
 
 Push to `main`; GitHub Pages builds automatically.
