@@ -33,6 +33,7 @@
   --radius: 16px;
   --radius-sm: 10px;
   --font: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-brand: "New York", "Iowan Old Style", "Apple Garamond", Baskerville, "Palatino Linotype", Palatino, Georgia, serif;
   --max-width: 1120px;
   --header-h: 56px;
   --page-gutter: max(1.25rem, env(safe-area-inset-left, 0px));
@@ -152,6 +153,7 @@ a:hover {
 }
 
 .brand--text-only .brand-name {
+  font-family: var(--font-brand);
   font-size: 1.35rem;
   letter-spacing: 0.01em;
   text-transform: lowercase;
