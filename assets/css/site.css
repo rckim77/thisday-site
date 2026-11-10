@@ -899,6 +899,10 @@ a:hover {
     text-align: center;
   }
 
+  .hero-lead {
+    margin-inline: auto;
+  }
+
   .hero-copy .app-icon--lg {
     margin-inline: auto;
   }
