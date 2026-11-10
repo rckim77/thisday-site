@@ -1,0 +1,79 @@
+{
+  "appScreenshots": {
+    "set": "v2.6.0",
+    "captureNote": "Reuses all 63 reviewed current-source DM Sans captures prepared in the v2.5.0 working set, including the refreshed iPhone/Duo cleanup fixtures. They were captured with Debug 2.5.0 (92) before the release marketing-version bump; only version/build identity changes for 2.6.0. No new captures are implied by this version folder.",
+    "inputs": {
+      "iphone/en_US/01-gallery-multiselect.png": {
+        "source": "thisday/app-store-slides/v2.6.0/inputs/iphone/en_US/01-gallery-multiselect.png",
+        "sha256": "0ab2420a4c539c1862c2df2ef3ac8cd61e0850af24a42ece2ca4a362373d6e51",
+        "dimensions": [
+          1320,
+          2868
+        ]
+      },
+      "iphone/en_US/02-similar-photos-review.png": {
+        "source": "thisday/app-store-slides/v2.6.0/inputs/iphone/en_US/02-similar-photos-review.png",
+        "sha256": "8fee14a80e78c8fb59f544800299dca9845583c1366507cd24ee6cf5ae1b004f",
+        "dimensions": [
+          1320,
+          2868
+        ]
+      },
+      "iphone/en_US/03-live-photos-convert.png": {
+        "source": "thisday/app-store-slides/v2.6.0/inputs/iphone/en_US/03-live-photos-convert.png",
+        "sha256": "79707bb8760a5f129bb0cfdfe0425eb1a5acbd88c1618c967e418c5b2824a8e6",
+        "dimensions": [
+          1320,
+          2868
+        ]
+      },
+      "iphone/en_US/04-duplicates-review.png": {
+        "source": "thisday/app-store-slides/v2.6.0/inputs/iphone/en_US/04-duplicates-review.png",
+        "sha256": "0c80d6f595e6e0845e79560769d108bab0dafa064e45497897fb09b9db75299a",
+        "dimensions": [
+          1320,
+          2868
+        ]
+      },
+      "iphone/en_US/05-achievements.png": {
+        "source": "thisday/app-store-slides/v2.6.0/inputs/iphone/en_US/05-achievements.png",
+        "sha256": "e0d736e43a16251ad5639bf18ccfdbb96f8848759827094aff066ebd16f3cb42",
+        "dimensions": [
+          1320,
+          2868
+        ]
+      },
+      "iphone/en_US/06-relive-memories.png": {
+        "source": "thisday/app-store-slides/v2.6.0/inputs/iphone/en_US/06-relive-memories.png",
+        "sha256": "c1d2cb27899c1bd2089c7fc035af16a7c8fdb74003908112dd5520d695cb5988",
+        "dimensions": [
+          1320,
+          2868
+        ]
+      },
+      "iphone/en_US/07-achieve-milestones.png": {
+        "source": "thisday/app-store-slides/v2.6.0/inputs/iphone/en_US/07-achieve-milestones.png",
+        "sha256": "1f488e52164d23ee4297233c5020880418a0a05483d96e8a961684dd8e315cb5",
+        "dimensions": [
+          1320,
+          2868
+        ]
+      }
+    }
+  },
+  "paywall": {
+    "source": "raw/premium-paywall.png",
+    "captured": "2026-11-10",
+    "appVersion": "2.7.0",
+    "build": "92",
+    "configuration": "Debug",
+    "device": "iPhone 17 Pro",
+    "runtime": "iOS 26.5",
+    "dimensions": [
+      1206,
+      2622
+    ],
+    "sha256": "0982f7e3de71b3a59cf88b918998554e87bcae8e401a7fedd6844e0e030b6fb2",
+    "captureNote": "Real RevenueCat paywall with external services enabled; no UI-test paywall stub."
+  }
+}

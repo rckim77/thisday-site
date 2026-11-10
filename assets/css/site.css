@@ -1,5 +1,21 @@
 /* This Day — marketing site */
 
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url("../fonts/dm-sans-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DM Sans";
+  font-style: italic;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url("../fonts/dm-sans-latin-italic.woff2") format("woff2");
+}
+
 :root {
   --bg-deep: #0a0e14;
   --bg-elevated: #121820;
@@ -16,7 +32,7 @@
   --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.35);
   --radius: 16px;
   --radius-sm: 10px;
-  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-brand: "New York", "Iowan Old Style", "Apple Garamond", Baskerville, "Palatino Linotype", Palatino, Georgia, serif;
   --max-width: 1120px;
   --header-h: 56px;
@@ -47,6 +63,13 @@ body {
 .legal-page {
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
 
 .landing-page {
@@ -874,6 +897,10 @@ a:hover {
 
   .hero-copy {
     text-align: center;
+  }
+
+  .hero-lead {
+    margin-inline: auto;
   }
 
   .hero-copy .app-icon--lg {

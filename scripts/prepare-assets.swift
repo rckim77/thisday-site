@@ -26,7 +26,7 @@ func checkoutURL(environmentKey: String, siblingName: String) -> URL {
 let thisdayRoot = checkoutURL(environmentKey: "THISDAY_APP_ROOT", siblingName: "thisday")
 let slidesToolRoot = checkoutURL(environmentKey: "APP_STORE_SLIDES_TOOL_ROOT", siblingName: "app-store-slides-tool")
 
-let screenshotVersion = ProcessInfo.processInfo.environment["THISDAY_SCREENSHOT_VERSION"] ?? "v1.17.0"
+let screenshotVersion = ProcessInfo.processInfo.environment["THISDAY_SCREENSHOT_VERSION"] ?? "v2.6.0"
 let screenshotDevice = ProcessInfo.processInfo.environment["THISDAY_SCREENSHOT_DEVICE"] ?? "iphone"
 let screenshotLocale = ProcessInfo.processInfo.environment["THISDAY_SCREENSHOT_LOCALE"] ?? "en_US"
 let framedOutputWidth = CGFloat(
@@ -34,16 +34,33 @@ let framedOutputWidth = CGFloat(
 )
 
 let rawScreenshotRoot = thisdayRoot
-    .appendingPathComponent("build/AppStore")
+    .appendingPathComponent("app-store-slides")
     .appendingPathComponent(screenshotVersion)
+    .appendingPathComponent("inputs")
     .appendingPathComponent(screenshotDevice)
     .appendingPathComponent(screenshotLocale)
-    .appendingPathComponent("raw")
 let assetsRoot = projectRoot.appendingPathComponent("assets/images")
 let devicesRoot = assetsRoot.appendingPathComponent("devices")
 
+let frameImagePath: String = {
+    if let override = ProcessInfo.processInfo.environment["THISDAY_IPHONE_FRAME"], !override.isEmpty {
+        return (override as NSString).expandingTildeInPath
+    }
+    let configURL = thisdayRoot.appendingPathComponent("app-store-slides/\(screenshotVersion)/configs/iphone-\(screenshotLocale).json")
+    if let data = try? Data(contentsOf: configURL),
+       let config = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+       let devices = config["devices"] as? [String: Any],
+       let iphone = devices["iphone"] as? [String: Any],
+       let frame = iphone["frame"] as? [String: Any],
+       let image = frame["image"] as? String {
+        let path = (image as NSString).expandingTildeInPath
+        return path.hasPrefix("/") ? path : configURL.deletingLastPathComponent().appendingPathComponent(path).path
+    }
+    return slidesToolRoot.appendingPathComponent("Assets/Frames/iPhone 17 Pro - Deep Blue - Portrait.png").path
+}()
+
 let iphoneFrame = FrameConfig(
-    imagePath: slidesToolRoot.appendingPathComponent("Assets/Frames/iPhone 17 Pro - Deep Blue - Portrait.png").path,
+    imagePath: frameImagePath,
     screenX: 72,
     screenY: 69,
     screenWidth: 1206,

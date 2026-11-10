@@ -33,22 +33,28 @@ The server auto-rebuilds when you save files. Stop it with `Ctrl+C` in the termi
 
 ### Regenerate screenshots
 
-Framed iPhone 17 Pro screenshots are generated from the This Day app repo. By default, the script uses `build/AppStore/v1.17.0/iphone/en_US/raw` and emits 1085px-wide site assets:
+Framed iPhone 17 Pro screenshots are generated from the This Day app repo. By default, the script uses the reviewed DM Sans captures in `app-store-slides/v2.6.0/inputs/iphone/en_US` and emits 1085px-wide site assets. The paywall is framed from `assets/images/raw/premium-paywall.png`:
 
 ```bash
 ./scripts/prepare-assets.swift
 ```
 
-The script looks for sibling checkouts at `../thisday` and `../app-store-slides-tool`. Override those paths, or the screenshot source, when needed:
+The app screenshots reuse the November 8 captures prepared for the 2.6.0 listing. The real RevenueCat paywall was captured on November 10 from Debug 2.7.0 (92). Input provenance and hashes are recorded in `assets/images/screenshot-sources.json`.
+
+The script looks for sibling checkouts at `../thisday` and `../app-store-slides-tool`. It reads the frame image path from the selected iPhone slide config, falling back to the slides tool’s frame directory. Set `THISDAY_IPHONE_FRAME` to override that path. Override the checkouts or screenshot source when needed:
 
 ```bash
 THISDAY_APP_ROOT=/path/to/thisday \
 APP_STORE_SLIDES_TOOL_ROOT=/path/to/app-store-slides-tool \
-THISDAY_SCREENSHOT_VERSION=v1.17.0 \
+THISDAY_SCREENSHOT_VERSION=v2.6.0 \
 THISDAY_SCREENSHOT_DEVICE=iphone \
 THISDAY_SCREENSHOT_LOCALE=en_US \
 ./scripts/prepare-assets.swift
 ```
+
+## Typography
+
+Site text uses DM Sans, including navigation, headings, and legal pages. The header wordmark retains its original serif font stack. The normal and italic variable fonts (Latin subset, weights 100–1000) are self-hosted in `assets/fonts/` from [Google Fonts](https://fonts.google.com/specimen/DM+Sans), with the SIL Open Font License included in `assets/fonts/OFL.txt`.
 
 ## Deploy
 
