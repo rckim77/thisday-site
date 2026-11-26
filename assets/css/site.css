@@ -965,13 +965,13 @@ a:hover {
   }
 
   .site-header .header-nav a {
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     font-weight: 500;
     line-height: 1.2;
   }
 
   .brand--text-only .brand-name {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -986,15 +986,15 @@ a:hover {
 
   .site-header .header-nav {
     gap: 0.3rem 0.45rem;
-    max-width: 62%;
+    max-width: none;
   }
 
   .site-header .header-nav a {
-    font-size: 0.68rem;
+    font-size: 0.75rem;
   }
 
   .brand--text-only .brand-name {
-    font-size: 0.98rem;
+    font-size: 1.08rem;
   }
 
   .hero h1 {
